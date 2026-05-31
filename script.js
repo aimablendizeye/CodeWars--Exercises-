@@ -82,12 +82,68 @@ function isMirrorImage (str1 , str2) {
 }
 
 // console.log(isMirrorImage("listen", "silent"))
+
 console.log(isMirrorImage("Test", "tseT "));
 
 
 
 
 
+// Q 3 
+
+// Write a function that takes in an array of digits and return the highest and lowest digits from it. Solve it without using `Math.max()` and `Math.min()`
+
+// ```jsx
+// highAndLow([1, 2, 3, 4, 5]);  // return 5 1
+// highAndLow([1, 2, -3, 4, 5]); // return 5 -3
+// highAndLow([1, 9, 3, 4, -5]); // return 9 -5
+// ```
+
+
+function highAndLow (arr) {
+    let high = arr[0];
+    let low = arr[0];
+
+    for (let i=1; i<arr.length; i++){
+        if (arr[i] > high) {
+            high = arr[i];
+        }
+
+        if ( arr[i] < low){
+            low = arr[i];
+        
+    }
+
+
+  
+}
+
+return `${high} ${low}`;
+}
+console.log(highAndLow([1, 2, 3, 4, 5]));
+
+
+
+
+
+
+//Q  4
+
+// Function that adds only even numbers 
+
+function sum (arr) {
+    let sum =0;
+    for ( let i=0; i<arr.length; i++){
+        if (arr[i] %2 ===0) {
+            sum += arr[i];
+        };
+    }
+
+    return sum;
+    
+}
+
+console.log(sum([4,5,3,6,3,5]));
 
 
 
