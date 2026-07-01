@@ -286,6 +286,34 @@ console.log(counti("wwde"));
 
 
 
+// Q12 
+// Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order of the strings of a1 which are substrings of strings of a2.
+
+// Example 1:
+// a1 = ["arp", "live", "strong"]
+
+// a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+
+// returns ["arp", "live", "strong"]
+
+
+function twoArray (arr1,arr2){
+  let result = []
+  for (let str1 of arr1){
+    for (let str2 of arr2){
+        if (str2.includes(str1)){
+            result.push(str1);
+            break;
+        }
+    }
+  }
+  return result.sort();
+}
+
+console.log(twoArray(["arp", "live", "strong"],["lively", "alive", "harp", "sharp", "armstrong"]));
+
+
+
 
 
 
