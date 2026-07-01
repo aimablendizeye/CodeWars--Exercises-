@@ -261,11 +261,28 @@ function generateHashtag (str) {
   let result = `#${words}`;
 
   // 4. Validate final length constraint
+  
   return result.length > 140 ? false : result;
 }
 
 console.log(generateHashtag("Hello there thanks for trying my Kata")); 
 // Output: #HelloThereThanksForTryingMyKata
+
+
+// Q 11 
+
+//Your task is simply to count the total number of lowercase letters in a string
+
+function counti (str){
+    let result = str.match (/[a-z]/g);
+    if (result){
+        return result.length 
+    }
+    return 0;
+    
+}
+
+console.log(counti("wwde"));
 
 
 
