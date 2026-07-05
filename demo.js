@@ -51,3 +51,13 @@ const newArr = [...arr , 4]
 
 console.log(newArr);
 
+
+const multipleArr = [
+    ["name", "Aimable"] 
+    ,["age" , 45]
+]
+
+const obj = Object.fromEntries(multipleArr)
+
+console.log(obj);
+
