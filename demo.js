@@ -26,19 +26,12 @@
 
 
 
-function twoArray (arr1,arr2){
-  let result = []
-  for (let str1 of arr1){
-    for (let str2 of arr2){
-        if (str2.includes(str1)){
-            result.push(str1);
-            break;
-        }
-    }
-  }
-  return result.sort();
-}
 
-console.log(twoArray(["arp", "live", "strong"],["lively", "alive", "harp", "sharp", "armstrong"]));
 
+// function checkPassed (arr) {
+//     let passed = arr.filter (n => n >= 50 )
+//     return passed.length
+// }
+
+// console.log( checkPassed ([39,80,40,78,34]))
 

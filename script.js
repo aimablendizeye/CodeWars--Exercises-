@@ -340,6 +340,16 @@ function solution(number){
 console.log(solution (5));
 
 
+// Q 14 Checking number of students who passed the course
+
+function checkPassed (arr) {
+    let passed = arr.filter (n => n >= 50 )
+    return passed.length
+}
+
+console.log( checkPassed ([39,80,40,78,34]))
+
+
 
 
 
