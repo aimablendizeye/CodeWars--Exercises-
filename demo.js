@@ -64,33 +64,57 @@
 
 
 
+// Counting characters 
 
 
-const letters = ["banana","banana", "orange", "Fruits"];
 
-const freq = {};
+// const letters = ["banana","banana", "orange", "Fruits"];
 
-for (const letter of letters) 
-    // freq[letter] = (freq[letter] || 0) + 1;
-{
-    for (const str of letter) {
+// const freq = {};
 
-    if (freq[str]){
-        freq[str] = freq[str] + 1
+// for (const letter of letters) 
+//     // freq[letter] = (freq[letter] || 0) + 1;
+// {
+//     for (const str of letter) {
+
+//     if (freq[str]){
+//         freq[str] = freq[str] + 1
     
-    }
-    else {
-        freq[str] = 1;
-    }
+//     }
+//     else {
+//         freq[str] = 1;
+//     }
 
-    }
+//     }
    
-}
-const sorted = Object.keys(freq).sort().reduce((acc,key) => {
-    acc[key] = freq[key];
-    return acc;
-}, {});
+// }
+// const sorted = Object.keys(freq).sort().reduce((acc,key) => {
+//     acc[key] = freq[key];
+//     return acc;
+// }, {});
 
- console.log(sorted);
+//  console.log(sorted);
+
+
+ 
+
+// Counting Numbers inside array 
+
+function numberCount (arr){
+    let freq = {}
+    for (const num of arr ){
+        if (freq[num]){
+            freq[num] = freq [num] + 1 ;
+        }
+        else {
+            freq [num] = 1; 
+        }
+    }
+    return freq;
+
+}
+// const more = Object.values(freq) > 1;
+
+console.log(numberCount([1, 2, 1, 3, 2, 1, 4]));
 
 
