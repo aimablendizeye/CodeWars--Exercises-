@@ -100,36 +100,44 @@
 
 // Counting Numbers inside array 
 
-function numberCount (arr){
-    let freq = {}
-    for (const num of arr ){
-        if (freq[num]){
-            freq[num] = freq [num] + 1 ;
-        }
-        else {
-            freq [num] = 1; 
-        }
-    }
-
-    // Returning  letter with highest Frequence 
 
 
 
-    let maxCount = 0;
-    let maxletter = ""
-    let newObj = {}
+
+// Return an arr of the highest frenquence with its number 
+
+// function numberCount (arr){
+//     let freq = {}
+//     for (const num of arr ){
+//         if (freq[num]){
+//             freq[num] = freq [num] + 1 ;
+//         }
+//         else {
+//             freq [num] = 1; 
+//         }
+//     }
+
+
+
+    // Returning  letter with highest Frequence  
+
+
+
+    // let maxCount = 0;
+    // let maxletter = ""
+    // let newObj = {}
     
-    for (let letter in freq){
-        if (freq[letter] > maxCount) {
-            maxCount = freq[letter];
-            maxletter = letter;
-       newObj.letter = maxletter;
-       newObj.count =maxCount;
+    // for (let letter in freq){
+    //     if (freq[letter] > maxCount) {
+    //         maxCount = freq[letter];
+    //         maxletter = letter;
+    //    newObj.letter = maxletter;
+    //    newObj.count =maxCount;
 
-        }
-    }
+    //     }
+    // }
 
-    return newObj;
+    // return newObj;
 
 
 
@@ -149,9 +157,30 @@ function numberCount (arr){
    
    
 
-    }
+    // }
 // const more = Object.values(freq) > 1;
 
-console.log(numberCount("banana"));
+// console.log(numberCount("banana"));
 
 
+
+
+// FUnction of pig Latin 
+
+
+// function toPigLatin (str) {
+//    if (/^[aeiou]/i.test(str)){
+//     const result = str + "way";
+//     return result.toLowerCase()
+//    }
+
+// }
+
+// console.log(toPigLatin("orangE"));
+
+
+function duplicate (arr) {
+  return arr.filter((item,index) => arr.indexOf(item) !==index);
+}
+
+console.log(duplicate([1, 2, 3, 2, 4, 5, 5, 6]));
