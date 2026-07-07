@@ -388,6 +388,8 @@ console.log( checkPassed ([39,80,40,78,34]))
 // The longest substring are "!@#$%^&" and "&^%$#@!", their length both are 7.
 
 
+
+ 
 function longestSubstringOf(string) {
   
 	const n = string.length;
@@ -417,6 +419,78 @@ function longestSubstringOf(string) {
 console.log(longestSubstringOf("baacab"));           
 console.log(longestSubstringOf("abcd"));             
 console.log(longestSubstringOf("!@#$%^&^%$#@!"));
+
+
+
+// Q 15
+
+
+
+// Here is the Condition 
+// Pig Latin is an English language game where the goal is to hide the meaning of a word from people not aware of the rules.
+
+// So, the goal of this kata is to wite a function that encodes a single word string to pig latin.
+
+// The rules themselves are rather easy:
+
+// The word starts with a vowel(a,e,i,o,u) -> return the original string plus "way".
+
+// The word starts with a consonant -> move consonants from the beginning of the word to the end of the word until the first vowel, then return it plus "ay".
+
+// The result must be lowercase, regardless of the case of the input. If the input string has any non-alpha characters, the function must return None, null, Nothing (depending on the language).
+
+// The function must also handle simple random strings and not just English words.
+
+// The input string has no vowels -> return the original string plus "ay".
+
+// For example, the word "spaghetti" becomes "aghettispay" because the first two letters ("sp") are consonants, so they are moved to the end of the string and "ay" is appended.
+
+
+function pigLatin(word) {
+  // Return null if the word contains non-letters
+
+  if (!/^[a-zA-Z]+$/.test(word)) {
+    return null;
+  }
+
+  word = word.toLowerCase();
+
+  const vowels = "aeiou";
+
+  // Starts with a vowel
+
+  if (vowels.includes(word[0])) {
+    return word + "way";
+  }
+
+  // Find first vowel
+
+  let firstVowel = -1;
+
+  for (let i = 0; i < word.length; i++) {
+    if (vowels.includes(word[i])) {
+      firstVowel = i;
+      break;
+    }
+  }
+
+  // No vowels
+
+  if (firstVowel === -1) {
+    return word + "ay";
+  }
+
+  // Move leading consonants to the end
+
+  return word.slice(firstVowel) + word.slice(0, firstVowel) + "ay";
+}
+
+console.log(pigLatin("apple"));      // "appleway"
+console.log(pigLatin("Spaghetti"));  // "aghettispay"
+console.log(pigLatin("chair"));      // "airchay"
+console.log(pigLatin("rhythm"));     // "rhythmay"
+console.log(pigLatin("123abc"));     // null
+console.log(pigLatin("Smile"));      // "ilesmay"
 
 
 
