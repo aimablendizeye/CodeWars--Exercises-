@@ -110,11 +110,48 @@ function numberCount (arr){
             freq [num] = 1; 
         }
     }
-    return freq;
 
-}
+    // Returning  letter with highest Frequence 
+
+
+
+    let maxCount = 0;
+    let maxletter = ""
+    let newObj = {}
+    
+    for (let letter in freq){
+        if (freq[letter] > maxCount) {
+            maxCount = freq[letter];
+            maxletter = letter;
+       newObj.letter = maxletter;
+       newObj.count =maxCount;
+
+        }
+    }
+
+    return newObj;
+
+
+
+ // Returning arr of the most frequence letter that are more than one 
+
+
+
+    // let  newArr = [];
+    // for (let num in freq) {
+    //     if (freq[num] > 1){
+    //          newArr.push(num);
+    //     }
+    // }
+
+    // return newArr;
+
+   
+   
+
+    }
 // const more = Object.values(freq) > 1;
 
-console.log(numberCount([1, 2, 1, 3, 2, 1, 4]));
+console.log(numberCount("banana"));
 
 
