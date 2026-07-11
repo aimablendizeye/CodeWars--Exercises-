@@ -525,6 +525,34 @@ console.log(parindrome("racecar"));
 
 
 
+// Kata 8kyu 
+
+// Q 17.
+
+
+
+function greet(name){
+  return `Hello, ${name} how are you doing today?`;
+}
+
+console.log(greet("Aimable"))
+
+
+// Q 18 
+
+
+function makeNegative(num) {
+  if (num <= 0) {
+    return num;
+  }
+  return -num;
+}
+
+console.log(makeNegative(0));  
+console.log(makeNegative(5)); 
+console.log(makeNegative(-5));
+
+
 
 
 
