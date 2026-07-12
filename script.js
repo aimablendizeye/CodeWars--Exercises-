@@ -554,6 +554,9 @@ console.log(makeNegative(-5));
 
 
 
+
+
+
 //Q 19 
 
 // Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
@@ -577,6 +580,55 @@ function sumArray(arr) {
     return arr.slice(1, -1).reduce((sum, num) => sum + num, 0);
 }
 console.log(sumArray([3,4,5,6,7,93]));
+
+
+
+
+// Q 20 
+// Compare Two values 
+
+function add(a, b){
+	// code here
+  if ( a == b) {
+    return true;
+  }
+  return false;
+}
+
+console.log(add(2,"6"));
+
+
+
+// Q 21 
+// Display the a day of the week 
+
+function whatday(num) {
+  switch (num) {
+    case 1:
+      return "Sunday";
+
+    case 2:
+      return "Monday";
+
+    case 3:
+      return "Tuesday";
+
+    case 4:
+      return "Wednesday";
+
+    case 5:
+      return "Thursday";
+
+    case 6:
+      return "Friday";
+
+    case 7:
+      return "Saturday";
+
+    default:
+      return "Wrong, please enter a number between 1 and 7";
+  }
+}
 
 
 
