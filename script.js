@@ -657,6 +657,16 @@ function reverseMessage(str) {
 console.log(reverseMessage('This is an example of a Reversed Message!'));
 
 
+// Q 23 
+// Function that returns the Century According to the year 
+
+function returnCentury (year) {
+    return Math.ceil (year / 100)
+}
+
+console.log(returnCentury (3));
+
+
 
 
 
