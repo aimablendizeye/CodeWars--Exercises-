@@ -1,2 +1,4 @@
- // let even = str.split (" ").filter (n => n%2 ===0).join("");
-  // return even;
+
+}
+
+console.log(sum([2,4,5,89,2,5]));
