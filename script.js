@@ -739,6 +739,28 @@ console.log(stray([17, 17, 3, 17, 17, 17, 17])); // 3
 console.log(stray([33, 33, 5, 33, 33]));         // 5
 
 
+// Q 26 
+
+// Return the number (count) of vowels in the given string.
+
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+// The input string will only consist of lower case letters and/or spaces.
+
+function getCount (str){
+  let count = 0;
+
+  for (let chr of str) {
+    if ("aeiou".includes(chr)){
+      count ++;
+    }
+  }
+  return count;
+}
+
+console.log(getCount("aimable"));
+
+
 
 
 
