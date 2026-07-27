@@ -846,6 +846,31 @@ function nerdify(txt) {
     .replace(/l/g, "1");
 }
 
+// Q 32 
+
+// Write a function which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits.
+
+// For example: (Input --> Output)
+
+// 10 --> 1
+// 99 --> 18
+// -32 --> 5
+// Let's assume that all numbers in the input will be integer values
+
+function suming(a) {
+    let count = 0;
+    let str = Math.abs(a).toString();
+    let digits = str.split("");
+
+    for (let x of digits) {
+        count += Number(x);
+    }
+
+    return count;
+}
+
+
+
 
 
 
