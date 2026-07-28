@@ -393,6 +393,19 @@
 
 //   console.log(suming(-35)) ;
 
+function sorting (arr){
+  let a = [...arr].sort((a,b)=> a-b);
+  if ( arr.every((val,index) => val === a[index]) ) {
+    return true;
+  }
+  return false ;
+
+   
+}
+
+
+console.log(sorting([1,2,4,3]));
+
 
 
 
