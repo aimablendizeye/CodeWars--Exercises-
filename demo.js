@@ -305,6 +305,103 @@
 
 
 
+// function uniqueNumber (arr) {
+//   for (let i =0; i < arr.length -1 ; i++){
+//     if ( arr[0] - arr[1] !== 0){
+//        arr[i] ++; 
+//     }
+//      return arr[1];
+   
+
+//   }
+       
+    
+//     }
+
+// console.log(uniqueNumber([33,33,5,33,33]));
+
+
+
+// function removeVowel (str){
+//    return str.replace (/[auioe]/gi, "");
+// }
+
+// console.log(removeVowel("aimAble"));
+
+// function removeMin (arr) {
+   
+//    for (let num of arr ) {
+//       if (num ==  Math.min (arr) ){
+//          arr.replace(num, "");
+//       }
+//        return arr;
+//    }
+ 
+// }
+
+
+// console.log(removeMin ([1,2,3,4,5,6]));
+// const str = "125678";
+
+// console.log(str.replaceAll("1","0"));
+
+// function getSub (str) {
+//     // let sub = str.slice (0,3);
+//     // let newName = sub.replace (sub , "Aimable Ndizeye");
+//     // return newName.split(" ")  ;
+
+//     // return str.concat ( " Mugabo", " Aimable");
+//     return str.padStart(3, "0");
+
+//     // return sub + " ,Aimable";
+// }
+
+// console.log(getSub("Ndizeye"));
+
+    // function solve (str) {
+    //     return Math.max(...str.match(/\d+/g).map(Number));
+    // }
+
+    // console.log(solve("jghghgh214hjf75"));
+
+
+    // function replacing (str) {
+    //     // return str.replaceAll ('f', 4);
+    //    return  str.replaceAll ("f",5).replaceAll("g",6);
+            
+    // }
+
+    // console.log(replacing("ffhhygghef"));
+
+    // let c = 29;
+    // console.log(c.toString ());
+   
+
+   
+//   function suming (a) {
+//     let count = 0;
+//     let str = Math.abs(a).toString();
+//     let one = str.split("");
+//     for (let x of one ){
+//         count += Number(x);
+
+//     }
+//     return count;
+    
+//   }
+
+
+//   console.log(suming(-35)) ;
+
+
+
+
+
+
+
+
+
+
 
 
 
