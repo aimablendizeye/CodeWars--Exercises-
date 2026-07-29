@@ -408,17 +408,54 @@
 
 
 
-function betterThanAverage(classPoints, yourPoints) {
-  let sum = classPoints.reduce((a,b) => a+b,0);
-  let avg = sum /classPoints.length
-  if (yourPoints > avg) {
-    return true;
-  }
-  return false;
-}
+// function betterThanAverage(classPoints, yourPoints) {
+//   let sum = classPoints.reduce((a,b) => a+b,0);
+//   let avg = sum /classPoints.length
+//   if (yourPoints > avg) {
+//     return true;
+//   }
+//   return false;
+// }
 
-console.log (betterThanAverage([4,6,7,47], 8));
+// console.log (betterThanAverage([4,6,7,47], 8));
 
+ 
+// let a = "45g";
+// let char = a.replace (/[0-9.]/g,'');
+
+// console.log(char);
+
+
+// function  calculateAge(birth, customYear) {  
+//    if (birth > customYear) {
+//         let year = birth - customYear ;
+//        if (year === 1){
+//         return  `You will be born in ${year} year.`;
+//         }
+//          else {
+//         return `You will be born in ${year} years`;
+//        }
+
+    
+//    }
+//   else if (birth < customYear) {
+
+//     let oldYear = customYear - birth;
+
+//       if (oldYear === 1){
+//         return `You are ${oldYear} year old`
+//         }
+//          else {
+//         return `You are ${oldYear} years old`
+//        }
+    
+//   }
+//   else {
+//     return "You were born this very year!"
+//   }
+// }
+
+// console.log(calculateAge(2001, 2002));
 
 
 
