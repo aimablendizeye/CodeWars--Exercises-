@@ -458,6 +458,48 @@
 // console.log(calculateAge(2001, 2002));
 
 
+// function merge (str1 ,str2, char) {
+//     let indexi = str1.indexOf(char);
+//     let first = str1.slice(0,indexi);
+//     let second = str2.slice (indexi);
+
+//     return `${first}${second}`;
+    
+// }
+
+// console.log(merge("aimable","Ndizeye","i"));
+
+
+// function add (arr) {
+//     return arr.reduce ((acc,elem) => {
+//         acc.push(elem + acc);
+//         return acc;
+//     } , []);
+// }
+
+
+// console.log(add([1,2,3,4,5]));
+
+
+// let a = 68;
+// let binary =a.toString(2)
+// // let target = "1";
+
+// // let occure = binary.toString().split(target).length-1;
+// //  console.log(occure);
+
+// console.log(binary);
+
+// function removing (str) {
+//     // let last = replace(str.length-1);
+//     // return str.split('').replace(last,'').join();
+//     return str.length-1;
+// }
+
+// console.log(removing("aimable"));
+
+
+
 
 
 
