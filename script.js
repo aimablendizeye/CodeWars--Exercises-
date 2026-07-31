@@ -1292,3 +1292,41 @@ function countSheeps(sheep) {
    let present = sheep.filter (n => n === true);
     return present.length 
 }
+
+
+// Q 46 
+
+// You task is to implement an simple interpreter for the notorious esoteric language HQ9+ that will work for a single character input:
+
+// If the input is 'H', return 'Hello World!'
+// If the input is 'Q', return the input
+// If the input is '9', return the full lyrics of 99 Bottles of Beer. It should be formatted like this:
+
+function HQ9(code) {
+  if (code === 'H') {
+    return 'Hello World!';
+  } else if (code === 'Q') {
+    return code;
+  } else if (code === '9') {
+    let lyrics = '';
+    
+    for (let i = 99; i >= 3; i--) {
+      lyrics += `${i} bottles of beer on the wall, ${i} bottles of beer.\n`;
+      lyrics += `Take one down and pass it around, ${i - 1} bottles of beer on the wall.\n`;
+    }
+    
+    // Handle the singular "bottle" and "no more" transitions
+    lyrics += `2 bottles of beer on the wall, 2 bottles of beer.\n`;
+    lyrics += `Take one down and pass it around, 1 bottle of beer on the wall.\n`;
+    
+    lyrics += `1 bottle of beer on the wall, 1 bottle of beer.\n`;
+    lyrics += `Take one down and pass it around, no more bottles of beer on the wall.\n`;
+    
+    lyrics += `No more bottles of beer on the wall, no more bottles of beer.\n`;
+    lyrics += `Go to the store and buy some more, 99 bottles of beer on the wall.`;
+    
+    return lyrics;
+  }
+  
+  // For '+', or any other character not matched above, return undefined
+  return undefined;
