@@ -1228,3 +1228,26 @@ function isOpposite(s1, s2){
 function catMouse(x) {
   return x.length <= 5 ? "Caught!" : "Escaped!";
 }
+
+
+// Q 44
+
+// Write a function that checks if a given string (case insensitive) is a palindrome.
+
+// A palindrome is a word, number, phrase, or other sequence of symbols that reads the same backwards as forwards, such as madam or racecar.
+
+function isPalindrome(x) {
+  // your code here
+  let clearStr = x.replace (/[^a-zA-Z0-9]/).toLowerCase();
+  
+  let left = 0;
+  let right = clearStr.length-1;
+  while (left < right){
+    if (clearStr[left] !== clearStr[right]) return false;
+    
+     left ++;
+     right --;
+  }
+  return true;
+ 
+}
