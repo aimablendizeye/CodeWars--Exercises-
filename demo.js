@@ -500,6 +500,112 @@
 
 
 
+// function drink (old ){
+//     switch   (old){
+//         case old <14:
+//             return "tody";
+//             break;
+//         case old >=14 && old <18:
+//             return "coke";
+//             break;
+//         case old >=18 && old <21:
+//               return "beer";
+//               break;
+//          default : 
+//           return "Whisky";            
+//     }
+// }
+
+// console.log(drink(13));
+
+
+// let a = "ai..";
+// let dot = a.split('');
+// for (let i = 1; i < dot.length-1; i++){
+
+// }
+
+// let str = "A....e";
+// let first = str.indexOf();
+// let second = str.indexOf(str.length-1);
+// console.log(first);
+ 
+
+
+
+
+// function check (name){
+
+//   const cleanStr = name.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  
+// let  reveser = cleanStr.split('').reverse().join('');
+
+// if (name == reveser) return true;
+// return false;
+// }
+// console.log(check("MAdam"));
+
+// let name = "madam"
+// let str = "madam";
+
+// console.log(name === str);
+
+// function mul (num){
+//     let str = num.toString().replace(/\D/g,'');
+//     let leng = str.length;
+//    let power = 5 ** leng;
+//    return num * power;
+
+// }
+
+// console.log(malt(-1));
+
+// function counting (arr){
+//     let present = arr.filter (n => n === true);
+//     return present.length 
+
+// }
+// console.log(counting([true,  true,  true,  false,
+//   true,  true,  true,  true ,
+//   true,  false, true,  false,
+//   true,  false, false, true ,
+//   true,  true,  true,  true ,
+//   false, false, true,  true]));
+
+
+
+// function xor(a,b){
+//     if (a === b) return false ;
+//     return true ;
+// }
+// console.log(xor(true,false));
+
+
+function largest (arr) {
+    // return arr.reduce ((a,b) => {
+    //     Math.max(a , b);
+    
+    // } , - Infinity );
+    
+    return Math.max(...arr);
+}
+console.log(largest([1,2,3,4,5]));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
