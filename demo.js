@@ -604,18 +604,36 @@
 // console.log(largest([1,2,3,4,5]));
 
 
-function largest (arr) {
-    let maxi = arr[0]
-    for (let i=1; i < arr.length-1; i++){
-        if (arr[i] > maxi  ){
-            maxi = arr[i];
+// function largest (arr) {
+//     let maxi = arr[0]
+//     for (let i=1; i < arr.length-1; i++){
+//         if (arr[i] > maxi  ){
+//             maxi = arr[i];
             
-        }
-        return maxi;
-    }
+//         }
+//         return maxi;
+//     }
+// }
+
+// console.log(largest([1,32,4,5,3,6]));
+
+
+// 1 st challenge without using reverse method , reverse the word ;
+
+function reversing (str) {
+    
+ let reversed = "";
+ for (let i=str.length-1; i >=0; i--){
+    reversed +=str[i];
+ }
+
+ return reversed;
+
+    
+
 }
 
-console.log(largest([1,32,4,5,3,6]));
+console.log(reversing("Aimable"));
 
 
 
