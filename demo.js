@@ -581,15 +581,29 @@
 // console.log(xor(true,false));
 
 
+// function largest (arr) {
+//     // return arr.reduce ((a,b) => {
+//     //     Math.max(a , b);
+    
+//     // } , - Infinity );
+    
+//     return Math.max(...arr);
+// }
+// console.log(largest([1,2,3,4,5]));
+
+
+
 function largest (arr) {
-    // return arr.reduce ((a,b) => {
-    //     Math.max(a , b);
+     return   arr.reduce ((a,b) => {
+      return  a > b? a:b;
     
-    // } , - Infinity );
-    
-    return Math.max(...arr);
+     })
 }
+
+
 console.log(largest([1,2,3,4,5]));
+
+
 
 
 
