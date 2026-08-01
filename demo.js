@@ -620,21 +620,50 @@
 
 // 1 st challenge without using reverse method , reverse the word ;
 
-function reversing (str) {
+// function reversing (str) {
     
- let reversed = "";
- for (let i=str.length-1; i >=0; i--){
-    reversed +=str[i];
- }
+//  let reversed = "";
+//  for (let i=str.length-1; i >=0; i--){
+//     reversed +=str[i];
+//  }
 
- return reversed;
+//  return reversed;
 
-    
+// }
 
+// console.log(reversing("Aimable"));
+
+
+// challenge 2 
+// largest number without using reduce or math.max 
+
+function largest (arr){
+    let largest = 0;
+    for (let i = 0; i < arr.length-1; i++){
+        if (arr[i] > largest){
+            largest = arr[i];
+        }
+    }
+    return largest;
 }
 
-console.log(reversing("Aimable"));
+console.log(largest([1,5,3,6,36,,7]));
 
+
+function even (num){
+    let result =[];
+
+    for (let i=0; i < num.length-1; i++){
+        if (num[i] %2 ===0)
+         result.push(num[i]);
+
+       
+}
+return result;
+}
+
+
+console.log(even([1,2,5,6,78,3]));
 
 
 
