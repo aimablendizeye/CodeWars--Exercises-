@@ -593,15 +593,29 @@
 
 
 
-function largest (arr) {
-     return   arr.reduce ((a,b) => {
-      return  a > b? a:b;
+// function largest (arr) {
+//      return   arr.reduce ((a,b) => {
+//       return  a > b? a:b;
     
-     })
+//      })
+// }
+
+
+// console.log(largest([1,2,3,4,5]));
+
+
+function largest (arr) {
+    let maxi = arr[0]
+    for (let i=1; i < arr.length-1; i++){
+        if (arr[i] > maxi  ){
+            maxi = arr[i];
+            
+        }
+        return maxi;
+    }
 }
 
-
-console.log(largest([1,2,3,4,5]));
+console.log(largest([1,32,4,5,3,6]));
 
 
 
