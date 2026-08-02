@@ -637,33 +637,59 @@
 // challenge 2 
 // largest number without using reduce or math.max 
 
-function largest (arr){
-    let largest = 0;
-    for (let i = 0; i < arr.length-1; i++){
-        if (arr[i] > largest){
-            largest = arr[i];
-        }
-    }
-    return largest;
-}
+// function largest (arr){
+//     let largest = 0;
+//     for (let i = 0; i < arr.length-1; i++){
+//         if (arr[i] > largest){
+//             largest = arr[i];
+//         }
+//     }
+//     return largest;
+// }
 
-console.log(largest([1,5,3,6,36,,7]));
+// console.log(largest([1,5,3,6,36,,7]));
 
 
-function even (num){
-    let result =[];
+// function even (num){
+//     let result =[];
 
-    for (let i=0; i < num.length-1; i++){
-        if (num[i] %2 ===0)
-         result.push(num[i]);
+//     for (let i=0; i < num.length-1; i++){
+//         if (num[i] %2 ===0)
+//          result.push(num[i]);
 
        
-}
-return result;
-}
+// }
+// return result;
+// }
 
 
-console.log(even([1,2,5,6,78,3]));
+// console.log(even([1,2,5,6,78,3]));
+
+function openOrSenior (data) {
+   
+   
+    let result = [];
+   for (let i =0; i< data.length; i++){
+      let first = data[i][0];
+      let second = data[i][1];
+
+       if (first >= 55 && second > 7) {
+        result.push("senior");   
+    }
+    else {
+        result.push("open");
+    }
+   }
+   
+    return result;
+
+}
+
+console.log(openOrSenior([[55,8],[33,5]]));
+
+
+
+
 
 
 
