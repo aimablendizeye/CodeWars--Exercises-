@@ -665,27 +665,36 @@
 
 // console.log(even([1,2,5,6,78,3]));
 
-function openOrSenior (data) {
+// function openOrSenior (data) {
    
    
-    let result = [];
-   for (let i =0; i< data.length; i++){
-      let first = data[i][0];
-      let second = data[i][1];
+//     let result = [];
+//    for (let i =0; i< data.length; i++){
+//       let first = data[i][0];
+//       let second = data[i][1];
 
-       if (first >= 55 && second > 7) {
-        result.push("senior");   
-    }
-    else {
-        result.push("open");
-    }
-   }
+//        if (first >= 55 && second > 7) {
+//         result.push("senior");   
+//     }
+//     else {
+//         result.push("open");
+//     }
+//    }
    
-    return result;
+//     return result;
 
-}
+// }
 
-console.log(openOrSenior([[55,8],[33,5]]));
+// console.log(openOrSenior([[55,8],[33,5]]));
+
+
+// function longest (s1,s2){
+//     let result = s1 + s2;
+//     let final = [...new Set(result)].sort().join('');
+//     return final;
+    
+// }
+// console.log(longest("aimable" , "adizeye"));
 
 
 
