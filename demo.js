@@ -764,23 +764,53 @@
 
 // console.log(suming("aimable"));
 
-function wordMarking (word) {
-    let sum = 0;
-
-for (const char of word){
-    sum += char.charCodeAt(0) - 96;
-}
-return sum;
-
-}
 
 
+// function wordMarking (word) {
+//     let sum = 0;
+
+// for (const char of word){
+//     sum += char.charCodeAt(0) - 96;
+// }
+// return sum;
+
+// }
+
+// console.log(wordMarking("aimable"));
 
 
+// function egg (str){
+//     return str.replaceAll("egg",'');
+// }
+
+// console.log(egg("dddeggggeteggadf"));
 
 
+// function Area (arr){
+//     let newArr =[];
+    
+//  for (let num of arr){
+//     if (num.length >1) {
+//        newArr = num.push(num[0] * num[1]);
+       
+        
+//     }
+//     else if (num.length = 1) {
+//         newArr = num.push(3.14 * num * num);
+//     }
 
-console.log(wordMarking("aimable"));
+
+// arr.map (n => {
+// if (n.length >1 )
+    
+// })
+//     return newArr;
+       
+//  }
+// }
+// console.log(Area([4,[3,4],5,6,7]));
+
+
 
 
 
