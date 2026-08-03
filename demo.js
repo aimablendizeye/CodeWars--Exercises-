@@ -696,6 +696,99 @@
 // }
 // console.log(longest("aimable" , "adizeye"));
 
+// function basicOp (oper, val1 , val2){
+//       if (oper === "+"){
+//        return val1 + val2;
+//       }
+
+//       else if (oper === "-"){
+//        return val1 - val2;
+//       }
+
+//      else if (oper === "*"){
+//        return val1 * val2;
+//       }
+//       else if (oper === "/"){
+//         return val1 / val2;
+//       }
+//       else {
+//         return 0
+//       }
+
+// }
+// console.log(basicOp("+" ,3,4));
+
+// function check (str){
+//     let upper =str.toUpperCase()
+
+//     if (upper === str) return true
+//     return false 
+// }
+
+// console.log(check("Helli HGGF"));
+
+
+// function mult (m,n){
+//     let result =[];
+//     result.length = m 
+
+//     for (let i = 1; i)
+ 
+ 
+// }
+ 
+
+// function letterCal (str) {
+//     let a=1,b=2,c=3,d=4,e=5,f=6,g=7,h=8,i=9,j=10,k=11,l=12,m=13,n=14,o=15,p=16,q=17,r=18,s=19,t=20,u=21,v=22,w=23,x=24,y=25,x=26;
+
+// }
+
+// let str = "aimable";
+
+// let letters = str.split('');
+
+
+// console.log(letters);
+
+// function suming(str){
+
+    
+// let [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26];
+
+//  let letter = str.split('');
+//  return letter.reduce ((a,b)=> a+b );
+ 
+ 
+
+// }
+
+// console.log(suming("aimable"));
+
+function wordMarking (word) {
+    let sum = 0;
+
+for (const char of word){
+    sum += char.charCodeAt(0) - 96;
+}
+return sum;
+
+}
+
+
+
+
+
+
+
+console.log(wordMarking("aimable"));
+
+
+
+
+
+
+
+
 
 
 
