@@ -825,16 +825,18 @@ function sortByArea (arr) {
     let result = [];  
     let areas = arr.map(n => {
         if (n.length >1){
-         return  n.reduce((a,b) => a * b) ;
+            let resu= n.reduce((a,b) => a * b) ;
+         return resu.toFixed(2); 
         }
         else {
-          return  n ** n * 3.14;
+          let resu = n ** n * 3.14;
+          return resu.toFixed(2);
         }
     });
     
-    return  areas.sort();
+    return  areas.sort((a,b)=> a-b);
 }
-console.log(sortByArea([[1,2],3,4,5,[2,3]]));
+console.log(sortByArea([ [4.23, 6.43], 1.23,   3.444,  [1.342, 3.212] ]));
 
 
 
