@@ -810,6 +810,16 @@
 // }
 // console.log(Area([4,[3,4],5,6,7]));
 
+function spreat (arr){
+    let number = [...arr].join('');
+    return Number(number);
+
+
+    
+}
+
+console.log(spreat("123456"));
+
 
 
 
