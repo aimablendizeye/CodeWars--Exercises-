@@ -840,18 +840,20 @@
 
 
 
-let demo = [2,4,5,6];
+// let demo = [2,4,5,6];
 
-if (Array.isArray(demo)){
-   console.log(demo.map (n => n*2)) ;
-}
+// if (Array.isArray(demo)){
+//    console.log(demo.map (n => n*2)) ;
+// }
 
-function spEng(sentence){
+// function spEng(sentence){
 
-  return sentence.toLowerCase().includes("englisH".toLowerCase());
-}
+//   return sentence.toLowerCase().includes("englisH".toLowerCase());
+// }
 
-console.log(spEng("hghdhfENglishjfj"));
+// console.log(spEng("hghdhfENglishjfj"));
+
+
 
 
 
