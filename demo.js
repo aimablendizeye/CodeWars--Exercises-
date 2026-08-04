@@ -821,16 +821,16 @@
 // console.log(spreat("123456"));
 
 
-function sortByArea (arr) {
+function sortByArea (array) {
     let result = [];  
-    let areas = arr.map(n => {
+    let areas = array.map(n => {
         if (n.length >1){
             let resu= n.reduce((a,b) => a * b) ;
-         return resu.toFixed(2); 
+          return parseFloat(resu.toFixed(2)); 
         }
         else {
-          let resu = n ** n * 3.14;
-          return resu.toFixed(2);
+          let resu = (n ** 2 )* 3.14;
+          return parseFloat(resu.toFixed(2));
         }
     });
     
