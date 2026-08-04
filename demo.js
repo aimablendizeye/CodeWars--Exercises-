@@ -810,15 +810,34 @@
 // }
 // console.log(Area([4,[3,4],5,6,7]));
 
-function spreat (arr){
-    let number = [...arr].join('');
-    return Number(number);
+// function spreat (arr){
+//     let number = [...arr].join('');
+//     return Number(number);
 
 
     
-}
+// }
 
-console.log(spreat("123456"));
+// console.log(spreat("123456"));
+
+
+function sortByArea (arr) {
+    let result = [];  
+    let areas = arr.map(n => {
+        if (n.length >1){
+         return  n.reduce((a,b) => a * b) ;
+        }
+        else {
+          return  n ** n * 3.14;
+        }
+    });
+    
+    return  areas.sort();
+}
+console.log(sortByArea([[1,2],3,4,5,[2,3]]));
+
+
+
 
 
 
