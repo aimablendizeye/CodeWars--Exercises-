@@ -821,22 +821,33 @@
 // console.log(spreat("123456"));
 
 
-function sortByArea (array) {
-    let result = [];  
-    let areas = array.map(n => {
-        if (n.length >1){
-            let resu= n.reduce((a,b) => a * b) ;
-          return parseFloat(resu.toFixed(2)); 
-        }
-        else {
-          let resu = (n ** 2 )* 3.14;
-          return parseFloat(resu.toFixed(2));
-        }
-    });
+// function sortByArea (array) {
+//     let result = [];  
+//     let areas = array.map(n => {
+//         if (n.length >1){
+//             let resu= n.reduce((a,b) => a * b) ;
+//           return parseFloat(resu.toFixed(2)); 
+//         }
+//         else {
+//           let resu = (n ** 2 )* 3.14;
+//           return parseFloat(resu.toFixed(2));
+//         }
+//     });
     
-    return  areas.sort((a,b)=> a-b);
+//     return  areas.sort((a,b)=> a-b);
+// }
+// console.log(sortByArea([ [4.23, 6.43], 1.23,   3.444,  [1.342, 3.212] ]));
+
+
+
+let demo = [2,4,5,6];
+
+if (Array.isArray(demo)){
+   console.log(demo.map (n => n*2)) ;
 }
-console.log(sortByArea([ [4.23, 6.43], 1.23,   3.444,  [1.342, 3.212] ]));
+
+
+
 
 
 
