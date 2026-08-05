@@ -856,6 +856,30 @@
 
 
 
+function cleaning (str){
+    return str.replace(/\d/g,"");
+         
+    
+}
+
+console.log(cleaning("fhfhgh35hfj25"));
+
+function checking (arr){
+    return /[arr[0].toLowerCase()]/.test(arr[1].toLowerCase());
+}
+
+console.log(checking(["ab", "aaa" ]));
+
+
+let  d = ["hgf","hfhf"]
+ let str1 = d[0];
+  let str2 = d[1];
+
+console.log(/[str1]/.test(str2));
+
+
+
+
 
 
 
