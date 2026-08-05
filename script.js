@@ -1620,10 +1620,29 @@ function countDirectionChanges(readings) {
 // Function should return true if it is possible and false if not.
 
 
+
+
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
    if (distanceToPump <= mpg * fuelLeft) return true;
     return false
 };
+
+
+
+// Q 60
+
+// Simple, given a string of words, return the length of the shortest word(s).
+
+// String will never be empty and you do not need to account for different data types.
+
+
+function findShort(s){
+   let word = s.split(" ").map (n =>n.length).sort((a,b) => a-b);
+   return word[0];
+}
+
+console.log(findShort("Let's travel abroad shall we"));
+
 
 
 
