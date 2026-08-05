@@ -1577,6 +1577,39 @@ function sortByArea(array) {
   return sentence.toLowerCase().includes("english".toLowerCase());
 }
 
+// Q 58
+
+// Sensor Trend Reversals
+
+// A sensor records a sequence of integer readings.
+
+// Your task is to count how many times the trend changes between:
+
+// increasing
+// decreasing
+// A trend reversal occurs when an increasing sequence becomes decreasing, or when a decreasing sequence becomes increasing.
+
+// Consecutive equal readings do not create a direction and must be ignored.
+
+function countDirectionChanges(readings) {
+  let changes = 0;
+  let previousDirection = 0; // 0 = no direction yet
+
+  for (let i = 1; i < readings.length; i++) {
+    if (readings[i] === readings[i - 1]) continue;
+
+    const currentDirection = readings[i] > readings[i - 1] ? 1 : -1;
+
+    if (previousDirection !== 0 && currentDirection !== previousDirection) {
+      changes++;
+    }
+
+    previousDirection = currentDirection;
+  }
+
+  return changes;
+}
+
 
 
 
