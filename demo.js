@@ -879,25 +879,40 @@
 
 
 
-function counting (arr) {
-    let result = 0;
+// function counting (arr) {
+//     let result = 0;
 
-    for (let i= 0; i<arr.length-1; i++){
+//     for (let i= 0; i<arr.length-1; i++){
     
-         if ( arr[i] > arr[i + i] ){
+//          if ( arr[i] > arr[i + i] ){
             
-            result ++;
-        }
-        else  {
-              result = 0 ;
-        }
+//             result ++;
+//         }
+//         else  {
+//               result = 0 ;
+//         }
          
-    }
-    return result;
+//     }
+//     return result;
+// }
+
+// console.log(counting([4,3,2]));
+
+
+function LetterCheck (arr){
+    const [str1,str2] = arr;
+
+    return [...new Set(str2.toLowerCase())].every (char => str1.includes(char));
+
+ 
 }
 
-console.log(counting([4,3,2]));
+console.log(LetterCheck(["trances", "nectar"]));
 
+let string = ["ghghss","hfh"];
+
+let uniq = [...new Set(string)];
+console.log(uniq);
 
 
 
