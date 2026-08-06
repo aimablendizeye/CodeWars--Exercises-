@@ -899,20 +899,36 @@
 // console.log(counting([4,3,2]));
 
 
-function LetterCheck (arr){
-    const [str1,str2] = arr;
+// function LetterCheck (arr){
+//     const [str1,str2] = arr;
 
-    return [...new Set(str2.toLowerCase())].every (char => str1.includes(char));
+//     return [...new Set(str2.toLowerCase())].every (char => str1.includes(char));
 
  
+// }
+
+// console.log(LetterCheck(["trances", "nectar"]));
+
+// let string = ["ghghss","hfh"];
+
+// let uniq = [...new Set(string)];
+// console.log(uniq);
+
+function acronom (str){
+    return str.split(' ').map(n => n[0].toUpperCase()).join('');
+    // let result = ""
+    //  for (const char of acron){
+    //     result +=char[0];
+        
+    //  }
+    //  return result.toUpperCase();
+
+
 }
 
-console.log(LetterCheck(["trances", "nectar"]));
+console.log(acronom("aimable ndizeye mugabo"));
 
-let string = ["ghghss","hfh"];
 
-let uniq = [...new Set(string)];
-console.log(uniq);
 
 
 
