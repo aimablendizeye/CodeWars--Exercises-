@@ -914,8 +914,14 @@
 // let uniq = [...new Set(string)];
 // console.log(uniq);
 
-function acronom (str){
-    return str.split(' ').map(n => n[0].toUpperCase()).join('');
+
+
+// function acronom (str){
+//     return str.split(' ').map(n => n[0].toUpperCase()).join('');
+
+
+
+
     // let result = ""
     //  for (const char of acron){
     //     result +=char[0];
@@ -924,9 +930,34 @@ function acronom (str){
     //  return result.toUpperCase();
 
 
+// }
+
+// console.log(acronom("aimable ndizeye mugabo"));
+
+function spliting(str,list){
+let arr = []
+ for (let i=0; i< list.length; i++) {
+     str.map(n =>n )
+     
+    //  str[i] = str.slice(0,list[i]);
+    //  str[i + i]=str.slice()
+        
+    }
+    return arr;
+
 }
 
-console.log(acronom("aimable ndizeye mugabo"));
+console.log(spliting("Aimableajf",[5,5]));
+
+
+let str = "Aimable";
+let arr = [2,3];
+
+console.log(str.split('').map(n => {
+    for (let i=0; i<arr.length; i++){
+        n + arr[i]
+    }
+}));
 
 
 
