@@ -1538,7 +1538,7 @@ function unscrambleEggs(word) {
 
 
 
-//  56
+// Q 56
 
 // In this kata you will be given an array of the dimensions of rectangles (array with width and length) and circles (radius - just a number). Your task is to sort the objects by their area in ascending order and return the sorted array of areas.
 
@@ -1563,7 +1563,7 @@ function sortByArea(array) {
 
   
 
-  // 57 
+  // Q 57 
 
 // The order of characters is important -- a string "abcEnglishdef" is correct but "abcnEglishsef" is not correct.
 
@@ -1642,6 +1642,28 @@ function findShort(s){
 }
 
 console.log(findShort("Let's travel abroad shall we"));
+
+// Q 61 
+
+// Write a function that checks if all the letters in the second string are present in the first one at least once, regardless of how many times they appear:
+
+// ["ab", "aaa"]    =>  true
+// ["trances", "nectar"]    =>  true
+// ["compadres", "DRAPES"]  =>  true
+// ["parses", "parsecs"]    =>  false
+// Function should not be case sensitive, as indicated in example #2. Note: both strings are presented as a single argument in the form of an array.
+
+
+function letterCheck (arr){
+    let str1 = arr[0].toLowerCase();
+    let str2 = arr[1].toLowerCase();
+    
+    return [...new Set(str2)].every (char => str1.includes(char));
+
+ 
+}
+
+console.log(letterCheck(["trances", "nectar"]));
 
 
 
