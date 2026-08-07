@@ -934,30 +934,24 @@
 
 // console.log(acronom("aimable ndizeye mugabo"));
 
-function spliting(str,list){
-let arr = []
- for (let i=0; i< list.length; i++) {
-     str.map(n =>n )
-     
-    //  str[i] = str.slice(0,list[i]);
-    //  str[i + i]=str.slice()
-        
+ function spliting (str,arr){
+    let result = []
+    let index = 0;
+
+    for (const num of arr){
+        result.push(str.slice(index , index+num))
+        index +=num;
     }
-    return arr;
 
-}
+    return result;
+ }
 
-console.log(spliting("Aimableajf",[5,5]));
+ console.log(spliting("1234567890",[4, 4]));
 
 
-let str = "Aimable";
-let arr = [2,3];
 
-console.log(str.split('').map(n => {
-    for (let i=0; i<arr.length; i++){
-        n + arr[i]
-    }
-}));
+
+
 
 
 
