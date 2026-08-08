@@ -934,19 +934,38 @@
 
 // console.log(acronom("aimable ndizeye mugabo"));
 
- function spliting (str,arr){
-    let result = []
-    let index = 0;
 
-    for (const num of arr){
-        result.push(str.slice(index , index+num))
-        index +=num;
-    }
 
-    return result;
- }
+//  function spliting (str,arr){
+//     let result = []
+//     let index = 0;
 
- console.log(spliting("1234567890",[4, 4]));
+//     for (const num of arr){
+//         result.push(str.slice(index , index+num))
+//         index +=num;
+//     }
+
+//     return result;
+//  }
+
+//  console.log(spliting("1234567890",[4, 4]));
+
+function solve (s){
+    
+    return s.split('').map(n => {
+        if ( n === "a"){
+            return "b";
+        }
+        else if (n === "z"){
+            return "y";
+        }
+        else {
+            s.fromCharCode(n.charCodeAt(0) + 1);
+        }
+    } )
+}
+
+console.log(solve("AImable"));
 
 
 
