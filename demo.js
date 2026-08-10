@@ -950,22 +950,34 @@
 
 //  console.log(spliting("1234567890",[4, 4]));
 
-function solve (s){
-    
-    return s.split('').map(n => {
-        if ( n === "a"){
-            return "b";
-        }
-        else if (n === "z"){
-            return "y";
-        }
-        else {
-            s.fromCharCode(n.charCodeAt(0) + 1);
-        }
-    } )
-}
 
-console.log(solve("AImable"));
+
+// function solve (s){
+    
+//     return s.split('').map(n => {
+//         if ( n === "a"){
+//             return "b";
+//         }
+//         else if (n === "z"){
+//             return "y";
+//         }
+//         else {
+//             s.fromCharCode(n.charCodeAt(0) + 1);
+//         }
+//     } )
+// }
+
+// console.log(solve("AImable"));
+
+
+
+
+//  Learning how to concating different dataType 
+
+let a = "5";
+let b = "7";
+
+console.log(...a,...b);
 
 
 
