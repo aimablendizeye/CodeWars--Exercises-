@@ -1748,6 +1748,40 @@ function splitByValue(k, elements) {
 }
 
 
+// Q 65
+
+// Find the last element of the given argument(s). If a single argument is passed and is a list/array or a string, return its last element. It is guaranteed that there will be at least one argument and that single-argument arrays/lists/strings will not be empty.
+
+// Examples
+// last(5)                 =>  5
+// last([1, 2, 3, 4])      =>  4
+// last("xyz")             => "z"
+// last(1, 2, 3, 4)        =>  4
+// last([1, 2], [3, 4])    =>  [3, 4]
+// last([[1, 2], [3, 4]])  =>  [3, 4]
+
+
+
+function last(...args) {
+  // 1. If multiple arguments are passed, return the last argument
+  if (args.length > 1) {
+    return args.at(-1);
+  }
+
+  // 2. If exactly one argument is passed, extract it
+  const firstArg = args[0];
+
+  // 3. Check if that single argument is an Array or a String
+  if (Array.isArray(firstArg) || typeof firstArg === 'string') {
+    return firstArg.at(-1);
+  }
+
+  // 4. Otherwise, it's a single primitive (like a number), so return it directly
+  return firstArg;
+}
+
+
+
 
 
 

@@ -974,10 +974,49 @@
 
 //  Learning how to concating different dataType 
 
-let a = "5";
-let b = "7";
+// let a = "5";
+// let b = "7";
 
-console.log(...a,...b);
+// console.log(...a,...b);
+
+
+
+
+// function solve (n) {
+//   if (n === "0") return "0";
+//   if (n === "1") return "1";
+
+//   let a = "0";
+//   let b = "1";
+
+//   for (let i=2; i<=n; i++){
+//     [a,b] = [a, a+b];
+//   }
+
+//   return b;
+     
+// }
+
+// console.log(solve(4));
+
+
+
+
+function last (data){
+  // if (data === "string"){
+  //   return data.at(-1);
+  // }
+  // else if (Array.isArray(data)){
+  //   return data.slice(-1).join('');
+  // }
+ if (typeof data === 'number' && !isNaN(data)) {
+  return data.toString();
+ }
+  return data.at(-1);
+}
+
+console.log(last(6,5));
+
 
 
 
