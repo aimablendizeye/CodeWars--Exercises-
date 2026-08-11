@@ -1002,20 +1002,24 @@
 
 
 
-function last (data){
+// function last (data){
   // if (data === "string"){
   //   return data.at(-1);
   // }
   // else if (Array.isArray(data)){
   //   return data.slice(-1).join('');
   // }
- if (typeof data === 'number' && !isNaN(data)) {
-  return data.toString();
- }
-  return data.at(-1);
-}
 
-console.log(last(6,5));
+
+//  if (typeof data === 'number' && !isNaN(data)) {
+//   return data.toString();
+//  }
+//   return data.at(-1);
+// }
+
+// console.log(last(6,5));
+
+
 
 
 

@@ -1781,6 +1781,36 @@ function last(...args) {
 }
 
 
+// Q 66 
+
+// Task
+// You're given a single word. Your task is to swap the halves. If the word has an uneven length, leave the character in the middle at that position and swap the chunks around it.
+
+// Examples
+// reverseByCenter("secret")  == "retsec" // no center character
+// reverseByCenter("agent")   == "nteag"  // center character is "e"
+
+
+function reverseByCenter (s){
+    
+    if (s.length % 2 ===0) {
+        let half = s.length/2;
+        let first = s.slice(0,half);
+        let second = s.slice(half,s.length);
+        return second + first; 
+    }
+    else {
+        let hal = Math.floor(s.length/2) ;
+        let one = s.slice(0,hal);
+        let middle = s.slice(hal,hal+1);
+        let two = s.slice(hal+1,s.length)
+        return two + middle + one;
+    }
+  
+}
+
+console.log(reverseByCenter("agent"));
+
 
 
 
