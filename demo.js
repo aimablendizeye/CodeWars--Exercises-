@@ -1020,6 +1020,15 @@
 // console.log(last(6,5));
 
 
+// let word = "Visit W3schools"
+// console.log(word.match("W3schools"));
+
+let text = "Visit Microsoft";
+console.log (text.replace(/Microsoft/i,"W3schools"));
+
+
+
+
 
 
 
