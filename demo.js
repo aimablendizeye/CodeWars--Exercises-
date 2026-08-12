@@ -1028,13 +1028,32 @@
 // let text = "Visit Microsoft";
 // console.log (text.replace(/Microsoft/i,"W3schools"));
 
-function dna (str){
-    const letters = str.split(" ").map(n => n.replace (/t/gi, "A") || n.replace (/a/gi, "T") || n.replace(/g/gi,"C") || n.replace(/c/gi,"G")).join();
-    return letters;
+
+
+// function dna (str){
+//     const letters = str.split(" ").map(n => n.replace (/t/gi, "A") || n.replace (/a/gi, "T") || n.replace(/g/gi,"C") || n.replace(/c/gi,"G")).join();
+//     return letters;
         
+// }
+
+// console.log(dna("ATTGC"));
+
+
+// function noRepeat (str) {
+//     let newArr = str.split("").sort(); 
+//      for (let i=0; i<newArr.length-1; i++){
+          
+//      }
+ 
+// }
+
+// console.log(noRepeat("aacddea"));
+
+function switching (arr) {
+    return arr.map (n => n === true? false:true);
 }
 
-console.log(dna("ATTGC"));
+console.log(switching([true,false,false,true,true]));
 
 
 
