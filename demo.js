@@ -1023,8 +1023,18 @@
 // let word = "Visit W3schools"
 // console.log(word.match("W3schools"));
 
-let text = "Visit Microsoft";
-console.log (text.replace(/Microsoft/i,"W3schools"));
+
+
+// let text = "Visit Microsoft";
+// console.log (text.replace(/Microsoft/i,"W3schools"));
+
+function dna (str){
+    const letters = str.split(" ").map(n => n.replace (/t/gi, "A") || n.replace (/a/gi, "T") || n.replace(/g/gi,"C") || n.replace(/c/gi,"G")).join();
+    return letters;
+        
+}
+
+console.log(dna("ATTGC"));
 
 
 
