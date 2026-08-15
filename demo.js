@@ -1049,12 +1049,33 @@
 
 // console.log(noRepeat("aacddea"));
 
-function switching (arr) {
-    return arr.map (n => n === true? false:true);
-}
+// function switching (arr) {
+//     return arr.map (n => n === true? false:true);
+// }
 
-console.log(switching([true,false,false,true,true]));
+// console.log(switching([true,false,false,true,true]));
 
+
+// function rotation (arr) {
+//     let count = 0;
+    
+//     for (let  i=0; i<arr.length-1; i++){
+//         if (arr[i] > arr[i])return true;
+//     }
+// }
+
+// console.log(rotation([3,3,3,3]));
+
+
+// function mergeArr (arr1,arr2){
+//     let newArr1 = [...new Set(arr1)];
+//      let newArr2 = [...new Set(arr2)];
+
+//      return [...newArr1,...newArr2].sort((a,b)=> a-b);
+   
+// }
+
+// console.log(mergeArr([1,4,1,5,6,1],[1,5,6,90,34]));
 
 
 
