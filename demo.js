@@ -1103,6 +1103,13 @@ console.log(checkRoot("1,2,3,6,5,6"));
 // console.log(arr.length);
 
 
+const arr = [1,2,3,4,5];
+
+const result = arr.filter ((n,i) => i % 2 ===0).map (n => n*2);
+
+console.log(result);
+
+
 
 
 
