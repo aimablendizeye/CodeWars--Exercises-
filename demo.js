@@ -1078,6 +1078,29 @@
 // console.log(mergeArr([1,4,1,5,6,1],[1,5,6,90,34]));
 
 
+function checkRoot (nums){
+    let newArr = nums.replaceAll(",","").split('');
+    let first = newArr[0];
+    for (let i=0; i<newArr.length; i++){
+        if (first - newArr[i] !== -1){
+            return "not Consecutive";
+        }
+        else {
+            let sum = newArr.reduce((a,b) => a+b);
+            return sum + 1;
+        }
+    }
+}
+
+console.log(checkRoot("1,2,3,4,5,6"));
+
+
+let arr = [1,2,3];
+arr[10] =90;
+
+console.log(arr.length);
+
+
 
 
 
