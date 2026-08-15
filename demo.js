@@ -1080,25 +1080,27 @@
 
 function checkRoot (nums){
     let newArr = nums.replaceAll(",","").split('');
-    let first = newArr[0];
-    for (let i=0; i<newArr.length; i++){
-        if (first - newArr[i] !== -1){
+    let number = newArr.map(n => Number(n));
+    
+    let first = number[0];
+    for (let i=0; i<number.length; i++){
+        if (number[i] -first === 1){
             return "not Consecutive";
         }
         else {
-            let sum = newArr.reduce((a,b) => a+b);
-            return sum + 1;
+            let sum = number.reduce((a,b) => a+b);
+            return sum + 1 ;
         }
     }
 }
 
-console.log(checkRoot("1,2,3,4,5,6"));
+console.log(checkRoot("1,2,3,6,5,6"));
 
 
-let arr = [1,2,3];
-arr[10] =90;
+// let arr = [1,2,3];
+// arr[10] =90;
 
-console.log(arr.length);
+// console.log(arr.length);
 
 
 
