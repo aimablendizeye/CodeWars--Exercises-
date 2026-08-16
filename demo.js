@@ -1111,6 +1111,14 @@ console.log(result);
 
 
 
+const numb = [1,1,1,1,5];
+let sameing = numb.every (n => n ==numb[0]);
+
+console.log(sameing);
+
+
+
+
 
 
 
