@@ -1082,16 +1082,18 @@ function checkRoot (nums){
     let newArr = nums.replaceAll(",","").split('');
     let number = newArr.map(n => Number(n));
     
-    let first = number[0];
-    for (let i=0; i<number.length; i++){
-        if (number[i] -first === 1){
-            return "not Consecutive";
-        }
-        else {
-            let sum = number.reduce((a,b) => a+b);
-            return sum + 1 ;
-        }
+    if (number.every((n,index) => n !==index +1)){
+          return "Not consecutive"
     }
+    else if (number.length ===4 || number.every(val => isNaN(Number(val)))){
+        return "Incorrect input"
+    }
+    else {
+    let sum = number.reduce((a,b) => a * b);
+    let square = sum + 1
+    return Math.sqrt(square);
+    }
+   
 }
 
 console.log(checkRoot("1,2,3,6,5,6"));
@@ -1103,19 +1105,35 @@ console.log(checkRoot("1,2,3,6,5,6"));
 // console.log(arr.length);
 
 
-const arr = [1,2,3,4,5];
+// const arr = [1,2,3,4,5];
 
-const result = arr.filter ((n,i) => i % 2 ===0).map (n => n*2);
+// const result = arr.filter ((n,i) => i % 2 ===0).map (n => n*2);
 
-console.log(result);
+// console.log(result);
 
 
 
-const numb = [1,1,1,1,5];
-let sameing = numb.every (n => n ==numb[0]);
+// const numb = [1,1,1,1,5];
+// let sameing = numb.every (n => n ==numb[0]);
 
-console.log(sameing);
+// console.log(sameing);
 
+
+
+function squareOrSquareRoot(array) {
+    const arr = array.map (n => {
+        if (Math.floor(Math.sqrt(n)) === Math.ceil(Math.sqrt(n)) ){
+            return Math.sqrt(n);
+        }
+        else {
+            return n ** 2;
+        }
+           
+    })
+     return arr;  
+}
+
+console.log(squareOrSquareRoot([1,2,3,4,9,16,15]));
 
 
 
