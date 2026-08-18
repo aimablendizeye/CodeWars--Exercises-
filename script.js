@@ -2006,3 +2006,20 @@ function expressionMatter (a,b,c) {
 
 console.log(expressionMatter(1,1,1));
 
+// Q 72 
+
+// Create a function that accepts a 2D array of names. The function will return a single array containing staff names in the order that they should empty the bin.
+
+  function binRota (arr) {
+
+    let newArr = arr.map ((val,index) =>  {
+        if (index %2 !==0) {
+            return val.reverse()
+        }
+        return val;
+    
+  });
+  return newArr.flat();
+  }
+  console.log( binRota([[1,2,3],[3,45,6],[4,52,8],[6,7,9],[4,6,7],[21,76,8]]));
+
