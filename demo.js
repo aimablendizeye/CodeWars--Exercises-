@@ -1078,25 +1078,25 @@
 // console.log(mergeArr([1,4,1,5,6,1],[1,5,6,90,34]));
 
 
-function checkRoot (nums){
-    let newArr = nums.replaceAll(",","").split('');
-    let number = newArr.map(n => Number(n));
+// function checkRoot (nums){
+//     let newArr = nums.replaceAll(",","").split('');
+//     let number = newArr.map(n => Number(n));
     
-    if (number.every((n,index) => n !==index +1)){
-          return "Not consecutive"
-    }
-    else if (number.length ===4 || number.every(val => isNaN(Number(val)))){
-        return "Incorrect input"
-    }
-    else {
-    let sum = number.reduce((a,b) => a * b);
-    let square = sum + 1
-    return Math.sqrt(square);
-    }
+//     if (number.every((n,index) => n !==index +1)){
+//           return "Not consecutive"
+//     }
+//     else if (number.length ===4 || number.every(val => isNaN(Number(val)))){
+//         return "Incorrect input"
+//     }
+//     else {
+//     let sum = number.reduce((a,b) => a * b);
+//     let square = sum + 1
+//     return Math.sqrt(square);
+//     }
    
-}
+// }
 
-console.log(checkRoot("1,2,3,6,5,6"));
+// console.log(checkRoot("1,2,3,6,5,6"));
 
 
 // let arr = [1,2,3];
@@ -1120,20 +1120,27 @@ console.log(checkRoot("1,2,3,6,5,6"));
 
 
 
-function squareOrSquareRoot(array) {
-    const arr = array.map (n => {
-        if (Math.floor(Math.sqrt(n)) === Math.ceil(Math.sqrt(n)) ){
-            return Math.sqrt(n);
-        }
-        else {
-            return n ** 2;
-        }
+// function squareOrSquareRoot(array) {
+//     const arr = array.map (n => {
+//         if (Math.floor(Math.sqrt(n)) === Math.ceil(Math.sqrt(n)) ){
+//             return Math.sqrt(n);
+//         }
+//         else {
+//             return n ** 2;
+//         }
            
-    })
-     return arr;  
-}
+//     })
+//      return arr;  
+// }
 
-console.log(squareOrSquareRoot([1,2,3,4,9,16,15]));
+// console.log(squareOrSquareRoot([1,2,3,4,9,16,15]));
+
+
+
+
+
+
+
 
 
 
