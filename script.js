@@ -2050,7 +2050,7 @@ function strCount (str,letter) {
 console.log(strCount("","a"));
 
 
-// Q 73 
+// Q 74
 
 // Write function which will create a string from a list of strings, separated by space.
 
@@ -2066,7 +2066,7 @@ function sentenceToString (arr) {
 console.log(sentenceToString(["Aimable","Ndizeye","Mugabo"]));
 
 
-// Q 74
+// Q 75
 
 // Write function splitSentence which will create a list of strings from a string.
 
