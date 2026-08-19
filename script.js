@@ -2064,3 +2064,19 @@ function sentenceToString (arr) {
       
 }
 console.log(sentenceToString(["Aimable","Ndizeye","Mugabo"]));
+
+
+// Q 74
+
+// Write function splitSentence which will create a list of strings from a string.
+
+// Example:
+
+// "hello world" -> ["hello", "world"]
+
+
+function wordTosentence (n) {
+  return n.split(' ')
+}
+
+
