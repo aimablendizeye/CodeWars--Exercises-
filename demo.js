@@ -1144,18 +1144,50 @@
 //  console.log(name.reverse());
 
 
- function binRota (arr) {
 
-    let newArr = arr.map ((val,index) =>  {
-        if (index %2 !==0) {
-            return val.reverse()
-        }
-        return val;
+
+//  function binRota (arr) {
+
+//     let newArr = arr.map ((val,index) =>  {
+//         if (index %2 !==0) {
+//             return val.reverse()
+//         }
+//         return val;
     
-  });
-  return newArr.flat();
-  }
-  console.log( binRota([[1,2,3],[3,45,6],[4,52,8],[6,7,9],[4,6,7],[21,76,8]]));
+//   });
+//   return newArr.flat();
+//   }
+//   console.log( binRota([[1,2,3],[3,45,6],[4,52,8],[6,7,9],[4,6,7],[21,76,8]]));
+
+
+
+
+
+  // Finding non-duplicate 
+
+
+//   function nonDuplicate (n){
+//     const arr = n.split('');
+  
+//     let uniq = arr.filter ((value ) => {
+//         if (arr.indexOf(value) === arr.lastIndexOf(value)) {
+//          console.log(value) ;
+//         }
+//         else {
+//             console.log(arr[0]) ;
+//         }
+     
+//     });
+//         // console.log(...uniq);
+
+//   }
+
+//   nonDuplicate("aabbccdde");
+
+
+
+
+
 
 
 
