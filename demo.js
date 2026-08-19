@@ -1200,16 +1200,33 @@
 //     return result;
 // }
 
-
-
 // console.log(letterToString("Ilove u"));
+
+
+
+function checking (numbers) {
+  let newArr = numbers.split(',');
+  let arr = newArr.reduce((a,b) => Number(a) * Number(b)) +1;
+  if (Math.ceil(Math.sqrt(arr)) !== Math.floor(Math.sqrt(arr))) {
+    return "Not consecutive";
+  }
+  else if (newArr.length >4 || newArr.length <4 || newArr.some(n => Number(n) !== "number")) {
+      return "Incorrect input";
+  }
+  else {
+        return Math.sqrt(arr);
+  }
+  
+
+}
+
+console.log(checking('4,5,6,7'));
 
 
 
 
 
   
-
 
 
 
