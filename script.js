@@ -2049,3 +2049,18 @@ function strCount (str,letter) {
 
 console.log(strCount("","a"));
 
+
+// Q 73 
+
+// Write function which will create a string from a list of strings, separated by space.
+
+// Example:
+
+// ["hello", "world"] -> "hello world"
+
+
+function sentenceToString (arr) {   
+ return  arr.join(' ');
+      
+}
+console.log(sentenceToString(["Aimable","Ndizeye","Mugabo"]));
