@@ -2130,3 +2130,9 @@ function checking(numbers) {
 console.log(checking("4,5,6,7"));
 
 
+
+
+
+
+
+
