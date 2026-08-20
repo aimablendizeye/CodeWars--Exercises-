@@ -1256,23 +1256,25 @@
 
 
 // }).then (result => console.log(result));
+
+
    
 
 
 
-function arrayPacking (arr) {
-  if (arr.length <1 || arr.length>4 || arr.some(n => n >=256 || n<0)) {
-    return arr;
-  }
-  let newArr = arr.map(n =>n.toString(2).padStart(8,'0'));
-    newArr.reverse();
+// function arrayPacking (arr) {
+//   if (arr.length <1 || arr.length>4 || arr.some(n => n >=256 || n<0)) {
+//     return arr;
+//   }
+//   let newArr = arr.map(n =>n.toString(2).padStart(8,'0'));
+//     newArr.reverse();
      
-  let finalArr = newArr.join('');
+//   let finalArr = newArr.join('');
   
-   return parseInt (finalArr,2);
-}
+//    return parseInt (finalArr,2);
+// }
 
-console.log(arrayPacking([ 155, 5, 8, 111 ]));
+// console.log(arrayPacking([ 155, 5, 8, 111 ]));
 
 
 
@@ -1281,6 +1283,57 @@ console.log(arrayPacking([ 155, 5, 8, 111 ]));
 // let result = parseInt(bin,2);
 
 // console.log(result);
+
+
+
+
+function vowelIndices (n){
+let  letters = "auoeiy";
+
+ let arr =[];
+ if (n === ""  ) return [];
+
+ let newArr  = n.split('');
+ for (let i=0; i<newArr.length; i++){
+
+     if (newArr[i].toLowerCase() ==="i"|| 
+         newArr[i].toLowerCase() ==="o"|| 
+         newArr[i].toLowerCase() ==="u"|| 
+         newArr[i].toLowerCase() ==="e"|| 
+         newArr[i].toLowerCase() ==="a"|| 
+         newArr[i].toLowerCase() ==="y")
+         
+      {
+        arr.push(newArr[i]);
+
+     }
+ }
+ return arr.map(val => newArr.indexOf(val)+1);
+}
+
+console.log(vowelIndices("ghuieru"));
+
+
+
+// function getUsers() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve([
+//         { username: 'john', email: 'john@test.com' },
+//         { username: 'jane', email: 'jane@test.com' },
+//       ]);
+//     }, 1000);
+//   });
+// }
+
+// getUsers().then (result => console.log(result));
+
+
+
+
+
+
+
 
 
 

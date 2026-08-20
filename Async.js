@@ -36,7 +36,7 @@ async function sayJoke(apiUrl, jokeId) {
   const response = await fetch(apiUrl);
   const data = await response.json();
 
-  // Check that jokes exists and is an array
+  
   if (!data || !Array.isArray(data.jokes)) {
     throw new Error(`No jokes at url: ${apiUrl}`);
   }
