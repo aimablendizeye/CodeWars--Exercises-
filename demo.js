@@ -1203,24 +1203,58 @@
 // console.log(letterToString("Ilove u"));
 
 
+// Consecutive integers 
 
-function checking (numbers) {
-  let newArr = numbers.split(',');
-  let arr = newArr.reduce((a,b) => Number(a) * Number(b)) +1;
-  if (Math.ceil(Math.sqrt(arr)) !== Math.floor(Math.sqrt(arr))) {
-    return "Not consecutive";
-  }
-  else if (newArr.length >4 || newArr.length <4 || newArr.some(n => Number(n) !== "number")) {
-      return "Incorrect input";
-  }
-  else {
-        return Math.sqrt(arr);
-  }
+
+
+
+// function checking (numbers) {
+//   let newArr = numbers.split(',');
+//   let arr = newArr.reduce((a,b) => Number(a) * Number(b)) +1;
+//   if (Math.ceil(Math.sqrt(arr)) !== Math.floor(Math.sqrt(arr))) {
+//     return "Not consecutive";
+//   }
+//   else if (newArr.length >4 || newArr.length <4 || newArr.some(n => Number(n) !== "number")) {
+//       return "Incorrect input";
+//   }
+//   else {
+//         return Math.sqrt(arr);
+//   }
   
 
-}
+// }
 
-console.log(checking('4,5,6,7'));
+// console.log(checking('4,5,6,7'));
+
+
+
+
+ function task1 () {
+  return new Promise ((resolve, reject) => {
+     setTimeout (() => {
+      // console.log("Task 1 Completed !")
+      resolve (10)
+     })
+  })
+ }
+
+
+//  async function getTask() {
+//    const result = await task1()
+//    const finalResult = await (result *2);
+//    console.log(result);
+//    console.log(finalResult);
+//  }
+
+//  getTask();
+
+task1 ().then ((result)  => {
+    console.log(result)
+    return result * 2
+
+
+}).then (result => console.log(result));
+   
 
 
 

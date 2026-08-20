@@ -9,7 +9,7 @@
 
 function launchAll(launchMissile) {
   for(let i = 0; i < 5; i++) {
-    setTimeout(function() {
+    setTimeout(() => {
       launchMissile(i);
     }, i * 1000);
   }
