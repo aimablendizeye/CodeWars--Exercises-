@@ -1260,7 +1260,27 @@
 
 
 
+function arrayPacking (arr) {
+  if (arr.length <1 || arr.length>4 || arr.some(n => n >=256 || n<0)) {
+    return arr;
+  }
+  let newArr = arr.map(n =>n.toString(2).padStart(8,'0'));
+    newArr.reverse();
+     
+  let finalArr = newArr.join('');
+  
+   return parseInt (finalArr,2);
+}
 
+console.log(arrayPacking([ 155, 5, 8, 111 ]));
+
+
+
+// let bin = '001001110010110100010111'
+
+// let result = parseInt(bin,2);
+
+// console.log(result);
 
 
 
