@@ -1229,14 +1229,14 @@
 
 
 
- function task1 () {
-  return new Promise ((resolve, reject) => {
-     setTimeout (() => {
-      // console.log("Task 1 Completed !")
-      resolve (10)
-     })
-  })
- }
+//  function task1 () {
+//   return new Promise ((resolve, reject) => {
+//      setTimeout (() => {
+//       // console.log("Task 1 Completed !")
+//       resolve (10)
+//      })
+//   })
+//  }
 
 
 //  async function getTask() {
@@ -1248,13 +1248,16 @@
 
 //  getTask();
 
-task1 ().then ((result)  => {
-    console.log(result)
-    return result * 2
 
 
-}).then (result => console.log(result));
+// task1 ().then ((result)  => {
+//     console.log(result)
+//     return result * 2
+
+
+// }).then (result => console.log(result));
    
+
 
 
 
