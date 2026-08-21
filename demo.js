@@ -1287,31 +1287,31 @@
 
 
 
-function vowelIndices (n){
-let  letters = "auoeiy";
+// function vowelIndices (n){
+// let  letters = "auoeiy";
 
- let arr =[];
- if (n === ""  ) return [];
+//  let arr =[];
+//  if (n === ""  ) return [];
 
- let newArr  = n.split('');
- for (let i=0; i<newArr.length; i++){
+//  let newArr  = n.split('');
+//  for (let i=0; i<newArr.length; i++){
 
-     if (newArr[i].toLowerCase() ==="i"|| 
-         newArr[i].toLowerCase() ==="o"|| 
-         newArr[i].toLowerCase() ==="u"|| 
-         newArr[i].toLowerCase() ==="e"|| 
-         newArr[i].toLowerCase() ==="a"|| 
-         newArr[i].toLowerCase() ==="y")
+//      if (newArr[i].toLowerCase() ==="i"|| 
+//          newArr[i].toLowerCase() ==="o"|| 
+//          newArr[i].toLowerCase() ==="u"|| 
+//          newArr[i].toLowerCase() ==="e"|| 
+//          newArr[i].toLowerCase() ==="a"|| 
+//          newArr[i].toLowerCase() ==="y")
          
-      {
-        arr.push(newArr[i]);
+//       {
+//         arr.push(newArr[i]);
 
-     }
- }
- return arr.map(val => newArr.indexOf(val)+1);
-}
+//      }
+//  }
+//  return arr.map(val => newArr.indexOf(val)+1);
+// }
 
-console.log(vowelIndices("ghuieru"));
+// console.log(vowelIndices("ghuieru"));
 
 
 
@@ -1332,6 +1332,15 @@ console.log(vowelIndices("ghuieru"));
 
 
 
+
+function moveZeros (arr){
+   let zeroes = arr.filter (n => n === 0);
+   let nonZeroes = arr.filter(n => n !==0)
+    nonZeroes.push(...zeroes);
+   return nonZeroes;
+}
+
+console.log (moveZeros(["r",5,0,6,3,"t",-1,0,2,false]));
 
 
 
