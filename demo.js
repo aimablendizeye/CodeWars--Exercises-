@@ -1287,35 +1287,35 @@
 
 
 
-// function vowelIndices (n){
-// let  letters = "auoeiy";
+function vowelIndices (n){
+let  letters = "auoeiy";
 
-//  let arr =[];
-//  if (n === ""  ) return [];
+ let arr =[];
+ if (n === ""  ) return [];
 
-//  let newArr  = n.split('');
-//  for (let i=0; i<newArr.length; i++){
+ let newArr  = n.split('');
+ for (let i=0; i<newArr.length; i++){
 
-//     const Vowel = newArr[i];
+    const Vowel = newArr[i];
 
-//      if (Vowel.toLowerCase() ==="i"|| 
-//          Vowel.toLowerCase() ==="o"|| 
-//          Vowel.toLowerCase() ==="u"|| 
-//          Vowel.toLowerCase() ==="e"|| 
-//          Vowel.toLowerCase() ==="a"|| 
-//          Vowel.toLowerCase() ==="y");
+     if (Vowel.toLowerCase() ==="i"|| 
+         Vowel.toLowerCase() ==="o"|| 
+         Vowel.toLowerCase() ==="u"|| 
+         Vowel.toLowerCase() ==="e"|| 
+         Vowel.toLowerCase() ==="a"|| 
+         Vowel.toLowerCase() ==="y");
          
-//       {
-//         arr.push(newArr.indexOf(Vowel) +1);
+      {
+        arr.push(i+1);
         
 
-//      }
-//  }
-// //  return arr.map(val => newArr.indexOf(val)+1);
-// return arr;
-// }
+     }
+ }
+//  return arr.map(val => newArr.indexOf(val)+1);
+return arr;
+}
 
-// console.log(vowelIndices("aimable"));
+console.log(vowelIndices("aimable"));
 
 
 
@@ -1350,14 +1350,8 @@
  // Learning Nested loop 
 
 
-  const details = ["First","middle","last"];
-  const names = ["Bigishiro","Ndizeye","aimable","Mugabo","Reponse"]
 
-  for (let i = 0; i<details.length; i++) {
-    for (let j= i+1 ; j<names.length; j++){
-         console.log(details[i],names[j]);
-         }
-  } 
+
 
 
 
