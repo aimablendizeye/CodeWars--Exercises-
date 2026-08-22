@@ -1288,7 +1288,6 @@
 
 
 function vowelIndices (n){
-let  letters = "auoeiy";
 
  let arr =[];
  if (n === ""  ) return [];
@@ -1296,19 +1295,15 @@ let  letters = "auoeiy";
  let newArr  = n.split('');
  for (let i=0; i<newArr.length; i++){
 
-    const Vowel = newArr[i];
-
-     if (Vowel.toLowerCase() ==="i"|| 
-         Vowel.toLowerCase() ==="o"|| 
-         Vowel.toLowerCase() ==="u"|| 
-         Vowel.toLowerCase() ==="e"|| 
-         Vowel.toLowerCase() ==="a"|| 
-         Vowel.toLowerCase() ==="y");
+     if ( newArr[i].toLowerCase() ==="i"|| 
+          newArr[i].toLowerCase() ==="o"|| 
+          newArr[i].toLowerCase() ==="u"|| 
+          newArr[i].toLowerCase() ==="e"|| 
+          newArr[i].toLowerCase() ==="a"|| 
+          newArr[i].toLowerCase() ==="y");
          
       {
-        arr.push(i+1);
-        
-
+        arr.push(i);
      }
  }
 //  return arr.map(val => newArr.indexOf(val)+1);
@@ -1351,10 +1346,16 @@ console.log(vowelIndices("aimable"));
 
 
 
+// function  increase (arr) {
+//   let newArr = [];
 
+//   newArr.push(arr)* arr[1];
 
+//   return newArr
 
+// }
 
+// console.log(increase([5,3]));
 
 
 
