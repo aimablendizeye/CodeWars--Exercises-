@@ -2258,6 +2258,42 @@ if (n.length === m.length ) return  0 ;
 }
 
 
+// Q 82 
+
+// We want to know the index of the vowels in a given word, for example, there are two vowels in the word super (the second and fourth letters).
+
+// So given a string "super", we should return a list of [2, 4].
+
+// Some examples:
+// Mmmm  => []
+// Super => [2,4]
+// Apple => [1,5]
+// YoMama -> [1,2,4,6]
+
+
+ function vowelIndices (n){
+  let arr =[];
+ let newArr  = n.split('');
+ 
+ for (let i=0; i< newArr.length; i++){
+
+    if (n === "" || !/[aeiouy]/i.test(n)) return [];
+     
+     if ( newArr[i].toLowerCase() ==="i"|| 
+          newArr[i].toLowerCase() ==="o"|| 
+          newArr[i].toLowerCase() ==="u"|| 
+          newArr[i].toLowerCase() ==="e"|| 
+          newArr[i].toLowerCase() ==="a"|| 
+          newArr[i].toLowerCase() ==="y")
+         
+       {
+        arr.push(i +1);
+      } 
+ }
+ return arr;
+}
+console.log(vowelIndices(""));
+
 
 
 
