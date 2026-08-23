@@ -2294,6 +2294,20 @@ if (n.length === m.length ) return  0 ;
 }
 console.log(vowelIndices(""));
 
+// Q 83 
+
+// Create a function that accepts an array of names, and returns an array of each name with its first letter capitalized and the remainder in lowercase.
+
+// Examples
+// ["jo", "nelson", "jurie"] -->  ["Jo", "Nelson", "Jurie"]
+// ["KARLY", "DANIEL", "KELSEY"] --> ["Karly", "Daniel", "Kelsey"]
+ 
+
+function toLower (arr) {
+    return arr.map (n => n.slice(0,1).toUpperCase() + n.slice(1).toLowerCase())
+}
+
+console.log(toLower(["jo", "nelson", "jurie"]));
 
 
 
