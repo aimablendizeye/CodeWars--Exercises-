@@ -1350,6 +1350,26 @@
 // console.log(increase([5,3]));
 
 
+function findEmployeesRole(name) {
+  let employees = [ {firstName: "Dipper", lastName: "Pines", role: "Boss"},
+                    {firstName: "smith", lastName: "aimable", role: "Truck Driver"} ]
+
+  for ( let i=0; i<employees.length; i++) {
+    if (name ===employees[i].firstName ||
+        name ===employees[i].lastName ||
+        name === employees[i].firstName + " " + employees[i].lastName)  {
+    return employees[i].role 
+    }
+ 
+  }
+    return "Does not Work here!"
+}
+
+console.log(findEmployeesRole("Dipper Pines"));
+
+
+
+
   
 
 

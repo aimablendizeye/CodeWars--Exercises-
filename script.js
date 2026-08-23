@@ -1,4 +1,4 @@
-// ES6 Questions 
+// CodeWars Questions 
 
 
  // Q 1. Find the odd numbers  and their sum , also do it on the  Even numbers then do the difference between them . the condition is to use rest operator as parameter .
@@ -33,7 +33,7 @@ console.log(addEvenOdd(...[1,2,3]));
 
 
 function sumUnique(arr){
-    const unique = arr.filter(item => arr.indexOf(item)=== arr.lastIndexOf(item));
+    const unique = arr.filter(item => arr.indexOf(item) === arr.lastIndexOf(item));
     return unique.reduce((a,b) => a + b,0);
 }
 
@@ -2310,4 +2310,31 @@ function toLower (arr) {
 console.log(toLower(["jo", "nelson", "jurie"]));
 
 
+// Q 84  object based 
+
+// You get a new job working for Eggman Movers. Your first task is to write a method that will allow the admin staff to enter a person’s name and return what that person's role is in the company.
+
+// You will be given an array of object literals holding the current employees of the company. You code must find the employee with the matching firstName and lastName and then return the role for that employee or if no employee is not found it should return "Does not work here!"
+
+
+
+// let employees = [ {firstName: "Dipper", lastName: "Pines", role: "Boss"}, ...... ]
+// There are no duplicate names in the array and the name passed in will be a single string with a space between the first and last name i.e. Jane Doe or just a name.
+
+function findEmployeesRole(name) {
+//   let employees = [ {firstName: "Dipper", lastName: "Pines", role: "Boss"},
+//  
+
+for ( let i=0; i<employees.length; i++) {
+    if (name ===employees[i].firstName ||
+        name ===employees[i].lastName ||
+        name === employees[i].firstName + " " + employees[i].lastName)
+   {
+    return employees[i].role 
+    }
+ 
+  }
+    return "Does not work here!"
+
+}
 
