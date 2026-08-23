@@ -1287,30 +1287,30 @@
 
 
 
-function vowelIndices (n){
+// function vowelIndices (n){
 
- let arr =[];
- if (n === ""  ) return [];
+//  let arr =[];
+//  if (n === ""  ) return [];
 
- let newArr  = n.split('');
- for (let i=0; i<newArr.length; i++){
+//  let newArr  = n.split('');
+//  for (let i=0; i<newArr.length; i++){
 
-     if ( newArr[i].toLowerCase() ==="i"|| 
-          newArr[i].toLowerCase() ==="o"|| 
-          newArr[i].toLowerCase() ==="u"|| 
-          newArr[i].toLowerCase() ==="e"|| 
-          newArr[i].toLowerCase() ==="a"|| 
-          newArr[i].toLowerCase() ==="y");
+//      if ( newArr[i].toLowerCase() ==="i"|| 
+//           newArr[i].toLowerCase() ==="o"|| 
+//           newArr[i].toLowerCase() ==="u"|| 
+//           newArr[i].toLowerCase() ==="e"|| 
+//           newArr[i].toLowerCase() ==="a"|| 
+//           newArr[i].toLowerCase() ==="y");
          
-      {
-        arr.push(i);
-     }
- }
-//  return arr.map(val => newArr.indexOf(val)+1);
-return arr;
-}
+//       {
+//         arr.push(i);
+//      }
+//  }
+// //  return arr.map(val => newArr.indexOf(val)+1);
+// return arr;
+// }
 
-console.log(vowelIndices("aimable"));
+// console.log(vowelIndices("aimable"));
 
 
 
@@ -1326,6 +1326,24 @@ console.log(vowelIndices("aimable"));
 // }
 
 // getUsers().then (result => console.log(result));
+
+
+
+function findDeletedNumber(n,m) {
+    let word = "Deletion";
+   
+
+if (n.length === m.length ) return  0 +`,No ${word.toLowerCase()}`;
+
+ let firstSum = n.reduce ((a,b)=> a+b);
+ let secondSum = m.reduce((a,b) => a+b);
+  let diff = firstSum - secondSum;
+
+ return `${diff}, ${word}`;
+
+   
+}
+console.log(findDeletedNumber([1,2,3,4,5], [3,4,1,5,2]));
 
 
 
