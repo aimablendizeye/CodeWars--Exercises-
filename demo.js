@@ -1350,23 +1350,53 @@
 // console.log(increase([5,3]));
 
 
-function findEmployeesRole(name) {
-  let employees = [ {firstName: "Dipper", lastName: "Pines", role: "Boss"},
-                    {firstName: "smith", lastName: "aimable", role: "Truck Driver"} ]
+// function findEmployeesRole(name) {
+//   let employees = [ {firstName: "Dipper", lastName: "Pines", role: "Boss"},
+//                     {firstName: "smith", lastName: "aimable", role: "Truck Driver"} ]
 
-  for ( let i=0; i<employees.length; i++) {
-    if (name ===employees[i].firstName ||
-        name ===employees[i].lastName ||
-        name === employees[i].firstName + " " + employees[i].lastName)  {
-    return employees[i].role 
-    }
+//   for ( let i=0; i<employees.length; i++) {
+//     if (name ===employees[i].firstName ||
+//         name ===employees[i].lastName ||
+//         name === employees[i].firstName + " " + employees[i].lastName)  {
+//     return employees[i].role 
+//     }
  
+//   }
+//     return "Does not Work here!"
+// }
+
+// console.log(findEmployeesRole("Dipper Pines"));
+
+
+function sumDigPow (a,b) {
+
+  let arr =[]
+
+  for (let i=a; i<b; i++) {
+       arr.push(i)
   }
-    return "Does not Work here!"
+ 
+  let newArr = []
+
+  for (let j=0; j<arr.length; j++) {
+
+    let char = arr[j].toString()
+    if (char.length >1) {
+     let nums =  String(arr[j]).split('').map(Number);
+
+     for (let k=0; k<nums.length; k++) {
+      if (nums[k].map(n=> n**k).reduce((a,b) => a+b) === arr[j] ) {
+
+       newArr.push (arr[j]);
+
+      }
+     }
+       ;
+    }
+  }
+  return newArr;
 }
-
-console.log(findEmployeesRole("Dipper Pines"));
-
+console.log(sumDigPow(90,110));
 
 
 
