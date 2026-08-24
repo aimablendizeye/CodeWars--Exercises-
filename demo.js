@@ -1368,35 +1368,49 @@
 // console.log(findEmployeesRole("Dipper Pines"));
 
 
-function sumDigPow (a,b) {
 
-  let arr =[]
 
-  for (let i=a; i<b; i++) {
-       arr.push(i)
-  }
+// function sumDigPow (a,b) {
+
+//   let arr =[]
+
+//   for (let i=a; i<b; i++) {
+//        arr.push(i)
+//   }
  
-  let newArr = []
+//   let newArr = []
 
-  for (let j=0; j<arr.length; j++) {
+//   for (let j=0; j<arr.length; j++) {
 
-    let char = arr[j].toString()
-    if (char.length >1) {
-     let nums =  String(arr[j]).split('').map(Number);
+//     let char = arr[j].toString()
+//     if (char.length >1) {
+//      let nums =  String(arr[j]).split('').map(Number);
 
-     for (let k=0; k<nums.length; k++) {
-      if (nums[k].map(n=> n**k).reduce((a,b) => a+b) === arr[j] ) {
+//      for (let k=0; k<nums.length; k++) {
+//       if (nums[k].map(n=> n**k).reduce((a,b) => a+b) === arr[j] ) {
 
-       newArr.push (arr[j]);
+//        newArr.push (arr[j]);
 
-      }
-     }
-       ;
-    }
-  }
-  return newArr;
+//       }
+//      }
+//        ;
+//     }
+//   }
+//   return newArr;
+// }
+// console.log(sumDigPow(90,110));
+
+
+
+function womenAge (n) {
+  let half = n/2
+  return n%2 ===0 ? `${n}? That's just 20, in base ${half}!`: `${n}? That's just 20, in base ${Math.floor(half)}!`
+       
 }
-console.log(sumDigPow(90,110));
+
+console.log(womenAge(57));
+
+
 
 
 
