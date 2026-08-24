@@ -1382,19 +1382,15 @@ function sumDigPow (a,b) {
 
   for (let j=0; j<arr.length; j++) {
     
-
-    let char = arr[j].toString() 
-    
-
-     if (char.length >1) {
+      let char = arr[j].toString() 
+   
 
      let nums =  char.split('').map(Number);
 
      newArr.push (nums);
-     
- }
-  
+    
 }
+
  let last =[];
 
  for (let k=0; k<newArr.length; k++) {
@@ -1403,9 +1399,17 @@ function sumDigPow (a,b) {
       
  }
 
- return last;
+ let result = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === last[i]) {
+      result.push(arr[i]);
+    }
+  }
+
+return result;
 }
- console.log(sumDigPow(100,115));
+ console.log(sumDigPow(1,100));
 
 
 
