@@ -1370,45 +1370,52 @@
 
 
 
-// function sumDigPow (a,b) {
+function sumDigPow (a,b) {
 
-//   let arr =[]
+  let arr =[]
 
-//   for (let i=a; i<b; i++) {
-//        arr.push(i)
-//   }
+  for (let i=a; i<b; i++) {
+       arr.push(i)
+  }
  
-//   let newArr = []
+  let newArr = []
 
-//   for (let j=0; j<arr.length; j++) {
+  for (let j=0; j<arr.length; j++) {
+    
 
-//     let char = arr[j].toString()
-//     if (char.length >1) {
-//      let nums =  String(arr[j]).split('').map(Number);
+    let char = arr[j].toString() 
+    
 
-//      for (let k=0; k<nums.length; k++) {
-//       if (nums[k].map(n=> n**k).reduce((a,b) => a+b) === arr[j] ) {
+     if (char.length >1) {
 
-//        newArr.push (arr[j]);
+     let nums =  char.split('').map(Number);
 
-//       }
-//      }
-//        ;
-//     }
-//   }
-//   return newArr;
-// }
-// console.log(sumDigPow(90,110));
-
-
-
-function womenAge (n) {
-  let half = n/2
-  return n%2 ===0 ? `${n}? That's just 20, in base ${half}!`: `${n}? That's just 20, in base ${Math.floor(half)}!`
-       
+     newArr.push (nums);
+     
+ }
+  
 }
+ let last =[];
 
-console.log(womenAge(57));
+ for (let k=0; k<newArr.length; k++) {
+       
+    last.push(newArr[k].map((val,index) => val** (index+1)).reduce((a,b) => a+b,0));
+      
+ }
+
+ return last;
+}
+ console.log(sumDigPow(100,115));
+
+
+
+// function womenAge (n) {
+//   let half = n/2
+//   return n%2 ===0 ? `${n}? That's just 20, in base ${half}!`: `${n}? That's just 20, in base ${Math.floor(half)}!`
+       
+// }
+
+// console.log(womenAge(57));
 
 
 

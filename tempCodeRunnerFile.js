@@ -1,1 +1,1 @@
- // if (n !== "number") return [];
+ // return newArr

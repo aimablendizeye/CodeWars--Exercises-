@@ -2321,6 +2321,7 @@ console.log(toLower(["jo", "nelson", "jurie"]));
 // let employees = [ {firstName: "Dipper", lastName: "Pines", role: "Boss"}, ...... ]
 // There are no duplicate names in the array and the name passed in will be a single string with a space between the first and last name i.e. Jane Doe or just a name.
 
+
 function findEmployeesRole(name) {
 //   let employees = [ {firstName: "Dipper", lastName: "Pines", role: "Boss"},
 //  
