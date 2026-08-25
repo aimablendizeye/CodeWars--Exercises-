@@ -1371,10 +1371,9 @@
 
 
 function sumDigPow (a,b) {
+ let arr =[]
 
-  let arr =[]
-
-  for (let i=a; i<b; i++) {
+  for (let i=a; i<=b; i++) {
        arr.push(i)
   }
  
@@ -1383,14 +1382,12 @@ function sumDigPow (a,b) {
   for (let j=0; j<arr.length; j++) {
     
       let char = arr[j].toString() 
-   
-
+  
      let nums =  char.split('').map(Number);
 
      newArr.push (nums);
     
 }
-
  let last =[];
 
  for (let k=0; k<newArr.length; k++) {
@@ -1398,7 +1395,6 @@ function sumDigPow (a,b) {
     last.push(newArr[k].map((val,index) => val** (index+1)).reduce((a,b) => a+b,0));
       
  }
-
  let result = [];
 
   for (let i = 0; i < arr.length; i++) {
