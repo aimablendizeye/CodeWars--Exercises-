@@ -2411,7 +2411,7 @@ return result;
 
 
 // Q 87
-
+ 
 // Write a function that returns twice the input value, unless the value is a "tricky double."
 
 // A number is considered a tricky double if it consists of two identical halves with no extra digits. For example, 44, 1212, and 7777 are tricky doubles because each half of the number is the same (4 and 4, 12 and 12, 77 and 77).
@@ -2430,6 +2430,8 @@ return result;
 // trickyDoubles(15)   // should return 30
 // trickyDoubles(100)  // should return 200
 // trickyDoubles(4343) // should return 4343
+
+
 
 
 function trickyDoubles (n) {
@@ -2462,7 +2464,6 @@ function trickyDoubles (n) {
  
  }
    }
-   
    return digit;    
 }
 console.log(trickyDoubles(1212));

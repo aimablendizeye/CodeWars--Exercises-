@@ -1408,55 +1408,70 @@
 //  console.log(sumDigPow(1,100));
 
 
-function trickyDoubles (n) {
-  let nums = n.toString();
-  if (nums.length %2 !==0) {
-    return Number(nums)*2;
+// function trickyDoubles (n) {
+//   let nums = n.toString();
+//   if (nums.length %2 !==0) {
+//     return Number(nums)*2;
 
-  }
+//   }
 
-  let half = nums.length/2;
+//   let half = nums.length/2;
 
-  let left = nums.slice(0,half).split('').map(Number);
-  let right = nums.slice(half).split('').map(Number);
+//   let left = nums.slice(0,half).split('').map(Number);
+//   let right = nums.slice(half).split('').map(Number);
 
-    let  newArr;
+//     let  newArr;
   
-   for (let i=0; i<left.length; i++){
-      newArr = [...left,...right]
-      let  arr = newArr.join('');
-      let digit = Number(arr);
+//    for (let i=0; i<left.length; i++){
+//       newArr = [...left,...right]
+//       let  arr = newArr.join('');
+//       let digit = Number(arr);
 
-    if (left[i] === right[i]) {
+//     if (left[i] === right[i]) {
 
-      return digit;   
- }
+//       return digit;   
+//  }
 
- else {
+//  else {
 
-  return digit *2;
+//   return digit *2;
  
- }
-   }
+//  }
+//    }
    
-   return digit;    
-}
-console.log(trickyDoubles(1212));
-
-
-
-
-
-
-
-
-// function womenAge (n) {
-//   let half = n/2
-//   return n%2 ===0 ? `${n}? That's just 20, in base ${half}!`: `${n}? That's just 20, in base ${Math.floor(half)}!`
-       
+//    return digit;    
 // }
+// console.log(trickyDoubles(1212));
 
-// console.log(womenAge(57));
+
+function order (str) {
+   let arr = str.split(' ');
+   let newArr =[]
+   for (let i=0; i<arr.length; i++) {
+      newArr.push (arr[i].split('').map(Number))
+      //.reduce((a,b)=> a+b,0)); 
+   }
+
+  //  let char = newArr.sort((a,b)=> a-b);
+  //  return char.join(' '); 
+  // return arr.sort((a,b)=> a-b);
+  return newArr;
+} 
+
+console.log(order("100 45 76 38 868"));
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
