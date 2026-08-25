@@ -1370,42 +1370,83 @@
 
 
 
-function sumDigPow (a,b) {
- let arr =[]
+// function sumDigPow (a,b) {
+//  let arr =[]
 
-  for (let i=a; i<=b; i++) {
-       arr.push(i)
-  }
+//   for (let i=a; i<=b; i++) {
+//        arr.push(i)
+//   }
  
-  let newArr = []
+//   let newArr = []
 
-  for (let j=0; j<arr.length; j++) {
+//   for (let j=0; j<arr.length; j++) {
     
-      let char = arr[j].toString() 
+//       let char = arr[j].toString() 
   
-     let nums =  char.split('').map(Number);
+//      let nums =  char.split('').map(Number);
 
-     newArr.push (nums);
+//      newArr.push (nums);
     
-}
- let last =[];
+// }
+//  let last =[];
 
- for (let k=0; k<newArr.length; k++) {
+//  for (let k=0; k<newArr.length; k++) {
        
-    last.push(newArr[k].map((val,index) => val** (index+1)).reduce((a,b) => a+b,0));
+//     last.push(newArr[k].map((val,index) => val** (index+1)).reduce((a,b) => a+b,0));
       
- }
- let result = [];
+//  }
+//  let result = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === last[i]) {
-      result.push(arr[i]);
-    }
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === last[i]) {
+//       result.push(arr[i]);
+//     }
+//   }
+
+// return result;
+// }
+//  console.log(sumDigPow(1,100));
+
+
+function trickyDoubles (n) {
+  let nums = n.toString();
+  if (nums.length %2 !==0) {
+    return Number(nums)*2;
+
   }
 
-return result;
+  let half = nums.length/2;
+
+  let left = nums.slice(0,half).split('').map(Number);
+  let right = nums.slice(half).split('').map(Number);
+
+    let  newArr;
+  
+   for (let i=0; i<left.length; i++){
+      newArr = [...left,...right]
+      let  arr = newArr.join('');
+      let digit = Number(arr);
+
+    if (left[i] === right[i]) {
+
+      return digit;   
+ }
+
+ else {
+
+  return digit *2;
+ 
+ }
+   }
+   
+   return digit;    
 }
- console.log(sumDigPow(1,100));
+console.log(trickyDoubles(1212));
+
+
+
+
+
 
 
 
