@@ -1472,6 +1472,36 @@
 // 
 
 
+
+async function fetchingData(url, timeOut) {
+
+  try {
+     const controller = new AbortController();
+
+     const response = await fetch(url, {
+      signal:controller.signal
+     })
+     const data = await response.json();
+
+     setTimeout (() => {
+      controller.abort();
+      
+      return data;
+
+     },timeOut);
+
+  } catch (error) {
+    if (error.name ==="AbortError"){
+      throw new Error ("Couldn't fetch Data")
+    }
+  }
+    
+}
+
+fetchingData ("https://jsonplaceholder.typicode.com/users", 5000);
+
+
+
     
  
 
