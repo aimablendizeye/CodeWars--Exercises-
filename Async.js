@@ -57,3 +57,24 @@ async function sayJoke(apiUrl, jokeId) {
     }
   };
 }
+
+
+
+// Q 5 From the Ngabo Exercises 
+
+
+function fetchingData () {
+  return new Promise ((resolve,reject) => {
+       setTimeout (() => {
+        const data = "Data fetched successfully!"
+        resolve(data)
+       },1000);
+  })
+}
+
+fetchingData().then (value => {
+       console.log(value);
+}).catch (error => 
+      console.error("error :",error));
+
+      

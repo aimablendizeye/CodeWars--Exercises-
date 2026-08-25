@@ -1444,27 +1444,38 @@
 // console.log(trickyDoubles(1212));
 
 
-function orderWeight(str) {
-   let arr = str.split(' ');
-   let nums = arr.map(Number);
-   let newArr =[]
-   for (let i=0; i<arr.length; i++) {
-      newArr.push (arr[i].split('').map(Number).reduce((a,b)=> a+b,0));
-      newArr.sort((a,b) => a-b); 
-   }
+
+
+// function orderWeight(str) {
+//    let arr = str.split(' ');
+//    let nums = arr.map(Number);
+//    let newArr =[]
+//    for (let i=0; i<arr.length; i++) {
+//       newArr.push (arr[i].split('').map(Number).reduce((a,b)=> a+b,0));
+//       newArr.sort((a,b) => a-b); 
+//    }
   
-     for (let i = 0; i < nums.length; i++) {
-      for (let j = i + 1; j < nums.length; j++) {
-         if (newArr[i] > newArr[j]) {
-            [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
+//      for (let i = 0; i < nums.length; i++) {
+//       for (let j = i + 1; j < nums.length; j++) {
+//          if (newArr[i] > newArr[j]) {
+//             [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
     
-            [nums[i], nums[j]] = [nums[j], nums[i]];
-         }
-      }
-   }
-   return nums.join(' ');  
-} 
-console.log(orderWeight("56 65 74 100 99 68 86 180 90"));
+//             [nums[i], nums[j]] = [nums[j], nums[i]];
+//          }
+//       }
+//    }
+//    return nums.join(' ');  
+// } 
+// console.log(orderWeight("56 65 74 100 99 68 86 180 90"));
+
+
+// 
+
+
+    
+ 
+
+
 
 
 
