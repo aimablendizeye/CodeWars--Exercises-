@@ -1444,21 +1444,27 @@
 // console.log(trickyDoubles(1212));
 
 
-function order (str) {
+function orderWeight(str) {
    let arr = str.split(' ');
+   let nums = arr.map(Number);
    let newArr =[]
    for (let i=0; i<arr.length; i++) {
-      newArr.push (arr[i].split('').map(Number))
-      //.reduce((a,b)=> a+b,0)); 
+      newArr.push (arr[i].split('').map(Number).reduce((a,b)=> a+b,0));
+      newArr.sort((a,b) => a-b); 
    }
-
-  //  let char = newArr.sort((a,b)=> a-b);
-  //  return char.join(' '); 
-  // return arr.sort((a,b)=> a-b);
-  return newArr;
+  
+     for (let i = 0; i < nums.length; i++) {
+      for (let j = i + 1; j < nums.length; j++) {
+         if (newArr[i] > newArr[j]) {
+            [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
+    
+            [nums[i], nums[j]] = [nums[j], nums[i]];
+         }
+      }
+   }
+   return nums.join(' ');  
 } 
-
-console.log(order("100 45 76 38 868"));
+console.log(orderWeight("56 65 74 100 99 68 86 180 90"));
 
 
 

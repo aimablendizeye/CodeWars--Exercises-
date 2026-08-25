@@ -2469,3 +2469,32 @@ function trickyDoubles (n) {
 console.log(trickyDoubles(1212));
 
 
+// Q 88 
+
+// For example 99 will have "weight" 18, 100 will have "weight" 1 so in the list 100 will come before 99.
+
+// Given a string with the weights of FFC members in normal order can you give this string ordered by "weights" of these numbers?
+
+// Example:
+// "56 65 74 100 99 68 86 180 90" ordered by numbers weights becomes: 
+
+// "100 180 90 56 65 74 68 86 99"
+// When two numbers have the same "weight", let us class them as if they were strings (alphabetical ordering) and not numbers:
+
+// 180 is before 90 since, having the same "weight" (9), it comes before as a string.
+
+// All numbers in the list are positive numbers and the list can be empty.
+
+function order(str) {
+  return str
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean)
+    .sort((a, b) => {
+      const weight = n => [...n].reduce((sum, x) => sum + +x, 0);
+      return weight(a) - weight(b) || a.localeCompare(b);
+    })
+    .join(' ');
+}
+
+
