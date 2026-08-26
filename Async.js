@@ -177,3 +177,32 @@ async function asyncCounter() {
 asyncCounter().then(numbers => {
   console.log(numbers);
 });
+
+
+
+// Q7 
+
+
+async function usersAddresses() {
+
+  try {
+
+      const response = await fetch("https://jsonplaceholder.typicode.com/users");
+  if (!response.ok) {
+    throw new Error ("Couldn't get resources")
+  }
+
+ const data = await response.json();
+ 
+return data.slice(0,3).map (user => ({
+               address: user.address
+}))
+
+  }catch (error){
+    console.log(error);
+  }
+}
+
+usersAddresses() 
+.then(addresses => console.log(addresses))
+  .catch(error => console.error("Error:", error));

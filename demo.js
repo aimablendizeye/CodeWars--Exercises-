@@ -1485,31 +1485,34 @@
 
 
 
-  function asyncCounter()  {
+//   function asyncCounter()  {
 
-   try {
+//    try {
 
-      return new Promise ((resolve,reject) => {
-      let arr =[]
-      setTimeout(() => {
-        for (let i=1; i<=5; i++) {
-          console.log(i);
-          arr.push(i);  
-      }
-       resolve(arr);
+//       return new Promise ((resolve,reject) => {
+//       let arr =[]
+//       setTimeout(() => {
+//         for (let i=1; i<=5; i++) {
+//           console.log(i);
+//           arr.push(i);  
+//       }
+//        resolve(arr);
           
-      },1000)
+//       },1000)
    
-  })
+//   })
 
-   }
-    catch (error) {
-      console.error(error)
-    } 
-}
-asyncCounter().
-               then (value => console.log(value))
-               .catch (error => console.log(error));
+//    }
+//     catch (error) {
+//       console.error(error)
+//     } 
+// }
+// asyncCounter().
+//                then (value => console.log(value))
+//                .catch (error => console.log(error));
+
+
+
 
 
 
