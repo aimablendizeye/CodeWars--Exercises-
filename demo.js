@@ -4,6 +4,9 @@
 //     for (let sr of str){
 //     }
 //    return sr;
+
+
+
     
 
 // }
@@ -1478,11 +1481,44 @@
 
 
 
+// Q6
+
+
+
+  function asyncCounter()  {
+
+   try {
+
+      return new Promise ((resolve,reject) => {
+      let arr =[]
+      setTimeout(() => {
+        for (let i=1; i<=5; i++) {
+          console.log(i);
+          arr.push(i);  
+      }
+       resolve(arr);
+          
+      },1000)
+   
+  })
+
+   }
+    catch (error) {
+      console.error(error)
+    } 
+}
+asyncCounter().
+               then (value => console.log(value))
+               .catch (error => console.log(error));
 
 
 
 
 
+
+
+
+    
     
  
 
