@@ -1476,29 +1476,9 @@
 
 // XHR Exercise 
 
-async function myFetch(url) {
 
-  return new PRomise ((resolve, reject) => {
-          const xhr = new XMLHttpRequest();
-           xhr.open ('GET',url)
 
-   xhr.onload = () => {
-      if (xhr.status >=200 && xhr.status <300) {
-        
-        resolve( xhr.responseText);
-       
-      }
-         reject (new error (`Can't get resources ${xhr.status}`));
-    }
 
-      xhr.onerror = () => {
-      reject(new error ("Network Error"));
-    }
-
-    xhr.send();
-  })
-    
-}
 
 
 
