@@ -78,3 +78,38 @@ fetchingData().then (value => {
       console.error("error :",error));
 
       
+
+// Q 3
+
+async function fetchingData(url, timeOut) {
+
+    const controller = new AbortController();
+    const timeId =   setTimeout (() => {
+                       controller.abort();
+                       },timeOut);
+
+  try {
+     const response = await fetch(url, {
+      signal:controller.signal
+     })
+     if (!response.ok) {
+      throw new Error ("Can't get Resources")
+
+     }
+
+  } catch (error) {
+    if (error.name ==="AbortError"){
+      throw new Error ("Couldn't fetch Data")
+    }
+
+    throw error;
+  }
+  finally {
+    clearTimeOut (timeId);
+  }   
+}
+fetchingData ("https://jsonplaceholder.typicode.com/users", 5000)
+              .then (data => console.log(data))
+              .catch(error => {
+                    console.log(error)
+              }) ;

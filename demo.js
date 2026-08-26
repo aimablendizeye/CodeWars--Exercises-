@@ -1473,50 +1473,33 @@
 
 
 
-async function fetchingData(url, timeOut) {
 
-    const controller = new AbortController();
-    const timeId =   setTimeout (() => {
-                       controller.abort();
-      
-                        
+// XHR Exercise 
 
-     },timeOut);
+async function myFetch(url) {
 
-  try {
-   
+  return new PRomise ((resolve, reject) => {
+          const xhr = new XMLHttpRequest();
+           xhr.open ('GET',url)
 
-     const response = await fetch(url, {
-      signal:controller.signal
-     })
-     if (!response.ok) {
-      throw new Error ("Can't get Resources")
-
-     }
-
-    //  let data = response.json()
-    //  console.log(data);
-
-   
-
-  } catch (error) {
-    if (error.name ==="AbortError"){
-      throw new Error ("Couldn't fetch Data")
+   xhr.onload = () => {
+      if (xhr.status >=200 && xhr.status <300) {
+        
+        resolve( xhr.responseText);
+       
+      }
+         reject (new error (`Can't get resources ${xhr.status}`));
     }
 
-    throw error;
-  }
-  finally {
-    clearTimeOut (timeId);
-  }
+      xhr.onerror = () => {
+      reject(new error ("Network Error"));
+    }
+
+    xhr.send();
+  })
     
 }
 
-fetchingData ("https://jsonplaceholder.typicode.com/users", 5000)
-              .then (data => console.log(data))
-              .catch(error => {
-                    console.log(error)
-              }) ;
 
 
 
