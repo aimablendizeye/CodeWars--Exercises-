@@ -1515,46 +1515,79 @@
 
 
 
-// function productSum (arr,m) {
-//   let nums = []
-//   for (let i=0; i<arr.length; i++){
-//     for (let j= i+1; j<arr.length; j++) {
-//       for (let k= j+1; k<arr.length; k++) {
-//         nums.push(arr[i]*arr[j]*arr[k])
+function productSum (arr,m) {
+  let nums = []
+  for (let i=0; i<arr.length; i++){
+    for (let j= i+1; j<arr.length; j++) {
+      for (let k= j+1; k<arr.length; k++) {
+        nums.push(arr[i]+arr[j]+arr[k])
 
-//       }
+      }
     
-//     }
+    }
+  }
+  console.log(nums)
+}
+
+productSum([2, 3, 1, 2, 4, 3], 3);
+
+
+
+
+// function likes (arr) {
+//   let size = arr.length -2;
+  
+//   if (arr.length === 0) {
+//     return "no one likes this";
 //   }
-//   console.log(nums.reduce((a,b) => a+b,0));
+//   else if(arr.length ===1) {
+//     return `${arr[0]} likes this `;
+//   }
+
+//   else if (arr.length === 2){
+//     return `${arr[0]} and ${arr[1]} likes this`;
+//   }
+//   else {
+//        return `${arr[0]} , ${arr[1]} and ${size} others like this`;
+  
+// }
 // }
 
-// productSum([9,8,10,4,2,7,5,1,3,6],3);
+// console.log(likes(["Aimable","Mugabo","hgfh","fghwe","hehe"]));
 
 
 
 
-function likes (arr) {
-  let size = arr.length -2;
-  
-  if (arr.length === 0) {
-    return "no one likes this";
-  }
-  else if(arr.length ===1) {
-    return `${arr[0]} likes this `;
-  }
 
-  else if (arr.length === 2){
-    return `${arr[0]} and ${arr[1]} likes this`;
-  }
-  else {
-       return `${arr[0]} , ${arr[1]} and ${size} others like this`;
-  
-}
-}
 
-console.log(likes(["Aimable","Mugabo","hgfh","fghwe","hehe"]));
 
+
+// function  insideOut (str) {
+//   let arr =  str.split(' ');
+//   for (let i=0; i<arr.length; i++) {
+//     if (arr[i].length %2 ===0 && arr[i] > 2) {
+
+//     }
+//   }
+// }
+ 
+
+// console.log(insideOut("aimable is a good man"));
+
+
+
+// let word = "ubug" 
+// let arr = word.split('');
+// let a = arr.length /2  ;
+// let b = arr.length/2 -1;
+//  let before = arr.at(a);
+//  let after = arr.at(b);
+// let newArr = arr.filter(n => n !==before && n !==after);
+
+//    newArr.push(after);
+//    newArr.unshift(before)
+
+// console.log(newArr);
 
 
 
