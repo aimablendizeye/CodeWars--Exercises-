@@ -1515,8 +1515,45 @@
 
 
 
+// function productSum (arr,m) {
+//   let nums = []
+//   for (let i=0; i<arr.length; i++){
+//     for (let j= i+1; j<arr.length; j++) {
+//       for (let k= j+1; k<arr.length; k++) {
+//         nums.push(arr[i]*arr[j]*arr[k])
+
+//       }
+    
+//     }
+//   }
+//   console.log(nums.reduce((a,b) => a+b,0));
+// }
+
+// productSum([9,8,10,4,2,7,5,1,3,6],3);
 
 
+
+
+function likes (arr) {
+  let size = arr.length -2;
+  
+  if (arr.length === 0) {
+    return "no one likes this";
+  }
+  else if(arr.length ===1) {
+    return `${arr[0]} likes this `;
+  }
+
+  else if (arr.length === 2){
+    return `${arr[0]} and ${arr[1]} likes this`;
+  }
+  else {
+       return `${arr[0]} , ${arr[1]} and ${size} others like this`;
+  
+}
+}
+
+console.log(likes(["Aimable","Mugabo","hgfh","fghwe","hehe"]));
 
 
 
