@@ -1475,30 +1475,48 @@
 
 async function fetchingData(url, timeOut) {
 
+    const controller = new AbortController();
+    const timeId =   setTimeout (() => {
+                       controller.abort();
+      
+                        
+
+     },timeOut);
+
   try {
-     const controller = new AbortController();
+   
 
      const response = await fetch(url, {
       signal:controller.signal
      })
-     const data = await response.json();
+     if (!response.ok) {
+      throw new Error ("Can't get Resources")
 
-     setTimeout (() => {
-      controller.abort();
-      
-      return data;
+     }
 
-     },timeOut);
+    //  let data = response.json()
+    //  console.log(data);
+
+   
 
   } catch (error) {
     if (error.name ==="AbortError"){
       throw new Error ("Couldn't fetch Data")
     }
+
+    throw error;
+  }
+  finally {
+    clearTimeOut (timeId);
   }
     
 }
 
-fetchingData ("https://jsonplaceholder.typicode.com/users", 5000);
+fetchingData ("https://jsonplaceholder.typicode.com/users", 5000)
+              .then (data => console.log(data))
+              .catch(error => {
+                    console.log(error)
+              }) ;
 
 
 
