@@ -1,1 +1,5 @@
-  console.log(nums.reduce((a,b) => a+b,0));
+if (newArr.length === 0)  {
+      return null;}
+      else if (newArr.length == arr.length) {
+        return newArr [0]
+      }

@@ -1515,21 +1515,21 @@
 
 
 
-function productSum (arr,m) {
-  let nums = []
-  for (let i=0; i<arr.length; i++){
-    for (let j= i+1; j<arr.length; j++) {
-      for (let k= j+1; k<arr.length; k++) {
-        nums.push(arr[i]+arr[j]+arr[k])
+// function productSum (arr,m) {
+//   let nums = []
+//   for (let i=0; i<arr.length; i++){
+//     for (let j= i+1; j<arr.length; j++) {
+//       for (let k= j+1; k<arr.length; k++) {
+//         nums.push(arr[i]+arr[j]+arr[k])
 
-      }
+//       }
     
-    }
-  }
-  console.log(nums)
-}
+//     }
+//   }
+//   console.log(nums)
+// }
 
-productSum([2, 3, 1, 2, 4, 3], 3);
+// productSum([2, 3, 1, 2, 4, 3], 3);
 
 
 
@@ -1595,7 +1595,6 @@ productSum([2, 3, 1, 2, 4, 3], 3);
     
     
  
-
 
 
 
