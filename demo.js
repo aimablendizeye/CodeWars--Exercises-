@@ -1591,7 +1591,41 @@
 
 
 
+// function add (arr,k) {
+//   let sum =0
+//   for (let i=0; i<k; i++) {
+//     sum += arr[i];
+//   }
 
+//   return sum;
+// }
+
+// console.log(add ([2,3,4,5,6,7,8],3));
+
+
+
+
+function maxSubarraySum(arr, k) {
+ // let maxSum = -Infinity;
+
+  for (let i = 0; i <= arr.length - k; i++) {
+     
+    //let currentSum = 0;
+
+    for (let j = 0; j < k; j++) {
+      //currentSum += arr[i + j];
+      console.log(arr[i + j])
+    }
+
+    // maxSum = Math.max(maxSum, currentSum);
+  }
+
+  // return maxSum;
+
+  
+}
+
+maxSubarraySum([2,3,4,5,6,7,8],3); 
 
 
 
