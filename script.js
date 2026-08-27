@@ -2557,7 +2557,8 @@ console.log(mirror([1,2,3,4,6,7]));
     })
 
     if (newArr.length === 0)  {
-      return null;}
+      return null
+    }
       else if (newArr.length == arr.length) {
         return newArr [0]
       }
@@ -2567,3 +2568,93 @@ console.log(mirror([1,2,3,4,6,7]));
   }
 
   console.log(firstNonRepeated("trendd"));
+
+
+
+  // Q 91 Alphabet War 
+
+//   Write a function that accepts fight string consists of only small letters and return who wins the fight. When the left side wins return Left side wins!, when the right side wins return Right side wins!, in other case return Let's fight again!.
+
+// The left side letters and their power:
+
+//  w - 4
+//  p - 3
+//  b - 2
+//  s - 1
+// The right side letters and their power:
+
+//  m - 4
+//  q - 3
+//  d - 2
+//  z - 1
+// The other letters don't have power and are only victims. Sum up each side's letters' power values to determine which side wins.
+
+// Example
+// alphabetWar("z");        //=> Right side wins!
+// alphabetWar("zdqmwpbs"); //=> Let's fight again!
+// alphabetWar("zzzzs");    //=> Right side wins!
+// alphabetWar("wwwwwwz");  //=> Left side wins!
+
+function alphabetWar (str) {
+
+  let arr = str.split('')
+
+  let right =  arr.filter(n => n == "m" ||
+                                n == "q"||
+                                n == "d"||
+                                n == "z"
+                                );
+   let left = arr.filter (n => n == "w" ||
+                                n == "p" ||
+                                n == "b"||
+                                n == "s" );
+
+  let numRight = right.map(n => {
+     if (n === "m") {
+     return  n = 4;
+     }
+     else if(n ==="q") {
+      return n = 3
+     }
+     else if(n ==="d") {
+       return  n = 2
+     }
+
+     else if(n ==="z") {
+      return n = 1
+     }
+  } )
+  
+
+    let numLeft = left.map(n => {
+     if (n === "w") {
+     return  n = 4;
+     }
+     else if(n ==="p") {
+      return n = 3
+     }
+     else if(n ==="b") {
+       return  n = 2
+     }
+
+     else if(n ==="s") {
+      return n = 1
+     }
+  } )
+    
+  const sumRight = numRight.reduce((a,b) => a + b,0);
+   const sumLeft = numLeft.reduce((a,b) => a + b,0);
+
+   if (sumRight > sumLeft) {
+    return "Right side wins!"
+   }
+
+   else if (sumLeft > sumRight) {
+    return "Left side wins!"
+   }
+   else if (sumLeft === sumRight) {
+    return `Let's fight again!`
+   }
+}
+
+console.log(alphabetWar("wwwww"));
