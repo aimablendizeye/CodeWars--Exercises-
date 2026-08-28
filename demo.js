@@ -1605,27 +1605,66 @@
 
 
 
-function maxSubarraySum(arr, k) {
- // let maxSum = -Infinity;
 
-  for (let i = 0; i <= arr.length - k; i++) {
+
+// function maxSubarraySum(arr, k) {
+//  // let maxSum = -Infinity;
+
+//   for (let i = 0; i <= arr.length - k; i++) {
      
-    //let currentSum = 0;
+//     //let currentSum = 0;
 
-    for (let j = 0; j < k; j++) {
-      //currentSum += arr[i + j];
-      console.log(arr[i + j])
-    }
+//     for (let j = 0; j < k; j++) {
+//       //currentSum += arr[i + j];
+//       console.log(arr[i + j])
+//     }
 
-    // maxSum = Math.max(maxSum, currentSum);
-  }
+//     // maxSum = Math.max(maxSum, currentSum);
+//   }
 
-  // return maxSum;
+//   // return maxSum;
 
   
+// }
+// maxSubarraySum([2,3,4,5,6,7,8],3); 
+
+
+
+
+// Is a Palindrome
+// using Loops 
+
+function goThrough(str) {
+      let arr = str.split('');
+
+      let arr1 =[];
+      let arr2 = [];
+      
+      for (let i=0; i<arr.length; i++){
+
+        arr1.push(arr[1]);
+        
+
+      }
+        for (let j=arr.length-1; j>=0; j--) {
+         arr2.push(arr[j]);
+        }
+
+        for (let k=0; k<arr2.length; k++) {
+          
+        }
+
+       if (arr1.includes(arr2[k])) return true;
+
+       return false;
+
+        
+      
 }
 
-maxSubarraySum([2,3,4,5,6,7,8],3); 
+console.log(goThrough("pullup"));
+
+
 
 
 
