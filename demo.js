@@ -1687,27 +1687,44 @@
 
 
 
-function countInversions (arr) {
+// function countInversions (arr) {
 
-      const  sorted = arr.sort((a,b) => a-b)
-      let count =0;
+//       const  sorted = arr.sort((a,b) => a-b)
+//       let count =0;
 
-      for (let i=0; i<sorted.length; i++) {
+//       for (let i=0; i<sorted.length; i++) {
 
-         for (let j= 0; j<arr.length; j++) {  
+//          for (let j= 0; j<arr.length; j++) {  
           
-        if (sorted[i] !== arr[j]) {
-          count ++;
-        }
+//         if (sorted[i] !== arr[j]) {
+//           count ++;
+//         }
          
-        }
+//         }
           
-        }
-        return count/2;
+//         }
+//         return count/2;
      
-}
+// }
 
-console.log(countInversions([4,1,2,3]));
+// console.log(countInversions([4,1,2,3]));
+
+
+
+
+function counting (arr) {
+
+  //let count = 0;
+  for (let i=0; i<arr.length; i++ ) {
+    console.log( arr[i] - 1);
+    }
+    
+  }
+  
+
+counting([6,5,4,3,3,3,3,2,1]);
+
+
 
 
 
