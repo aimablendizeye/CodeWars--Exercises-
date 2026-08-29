@@ -1687,6 +1687,30 @@
 
 
 
+function countInversions (arr) {
+
+      const  sorted = arr.sort((a,b) => a-b)
+      let count =0;
+
+      for (let i=0; i<sorted.length; i++) {
+
+         for (let j= 0; j<arr.length; j++) {  
+          
+        if (sorted[i] !== arr[j]) {
+          count ++;
+        }
+         
+        }
+          
+        }
+        return count/2;
+     
+}
+
+console.log(countInversions([4,1,2,3]));
+
+
+
 
  
 
