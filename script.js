@@ -2658,3 +2658,30 @@ function alphabetWar (str) {
 }
 
 console.log(alphabetWar("wwwww"));
+
+// Q 92 
+
+// Given 3 positive parameters a, b, limit, return all positive numbers that are a multiple of both a and b up to and including limit.
+
+// Examples
+// 1, 5, 15 --> [5, 10, 15]
+// 3, 5, 15 --> [15]
+// 3, 5, 40 --> [15, 30]
+// 2, 4, 40 --> [4, 8, 12, 16, 20, 24, 28, 32, 36, 40]
+
+
+function multiples (a,b,limit) {
+
+  const arr =[];
+  
+  for (let i=a; i<=limit; i++ ) {
+    if (i% a ===0 && i% b ===0){
+
+      arr.push(i);
+    } 
+  }
+  return arr;
+}
+console.log(multiples(7,16,1000));
+
+

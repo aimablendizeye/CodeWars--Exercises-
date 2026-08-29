@@ -1634,42 +1634,60 @@
 // Is a Palindrome
 // using Loops 
 
-function goThrough(str) {
-      let arr = str.split('');
+// function goThrough(str) {
+//       let arr = str.split('');
 
-      let arr1 =[];
-      let arr2 = [];
+//       let arr1 =[];
+//       let arr2 = [];
       
-      for (let i=0; i<arr.length; i++){
+//       for (let i=0; i<arr.length; i++){
 
-        arr1.push(arr[1]);
+//         arr1.push(arr[1]);
         
 
-      }
-        for (let j=arr.length-1; j>=0; j--) {
-         arr2.push(arr[j]);
-        }
+//       }
+//         for (let j=arr.length-1; j>=0; j--) {
+//          arr2.push(arr[j]);
+//         }
 
-        for (let k=0; k<arr2.length; k++) {
+//         for (let k=0; k<arr2.length; k++) {
           
-        }
+//         }
 
-       if (arr1.includes(arr2[k])) return true;
+//        if (arr1.includes(arr2[k])) return true;
 
-       return false;
+//        return false;
 
         
       
-}
+// }
 
-console.log(goThrough("pullup"));
-
-
+// console.log(goThrough("pullup"));
 
 
 
-    
-    
+
+// function counting (n) {
+//   let count = []
+//   let arr =["call","call","call","call","call"]
+//   for (let i=n; i<arr.length; i++){
+
+//     if(arr[i] === "call") {
+//        count.push(count ++);
+//     }
+//     count++;
+
+//   }
+
+//   return count;
+// }
+
+// console.log(counting(10));
+
+
+
+
+
  
 
 
