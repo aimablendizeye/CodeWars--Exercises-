@@ -1754,7 +1754,7 @@
 
 
 
-function anagram (test, original) {
+//function anagram (test, original) {
   // let testArr = test.toLowerCase().split('');
   // let originalArr = original.toLowerCase().split('');
 
@@ -1766,13 +1766,34 @@ function anagram (test, original) {
   //   return false;
   // }
 
-  return /test/i.test(original);
+ // return /test/i.test(original);
 
   
+//}
 
+//console.log(anagram("ound", "round"));
+
+
+
+function removing (arr) {
+
+  let  newArr =arr.filter(n => n !== Number(n));
+
+  let allUpper =  newArr.join('').toUpperCase();
+  let vowel = ["A","E","O","U","I"];
+  let vow =[]
+  
+
+ if (vowel.some(n => allUpper.includes(n))){
+
+ }
+
+ 
+ 
 }
 
-console.log(anagram("ound", "round"));
+console.log(removing([1,"a","B",5,3,"c"]));
+
 
 
 
