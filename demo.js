@@ -1711,18 +1711,73 @@
 
 
 
+// function counting(arr) {
+//   let count = 0;
 
-function counting (arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       if (arr[i] > arr[j]) {
+//         count++;
+//       }
+//     }
+//   }
 
-  //let count = 0;
-  for (let i=0; i<arr.length; i++ ) {
-    console.log( arr[i] - 1);
-    }
-    
-  }
+//   return count;
+// }
+
+// console.log(counting([4, 3, 2, 1])); // 6
+
+
+
+
+
+// function checkCollision (x1,y1,r1,x2,y2,r2) {
+//   // let sumRadius = 2 *(r1 + r2);
+//   let sumX = Math.abs(x1) + 2*r1;
+//   let sumY = Math.abs(y1) + 2*r1;
+
+//   return sumY;
+
+//   // if (sumX == Math.abs(x2) && sumY == Math.abs(y2)){
+//   //   return true;
+//   // }
+//   // else {
+//   //   return false;
+//   // }
+  
+// }
+// console.log(checkCollision(-1, 1, 6, -10.1, 1.1, 1));
+
+
+
+
+
+
+
+function anagram (test, original) {
+  // let testArr = test.toLowerCase().split('');
+  // let originalArr = original.toLowerCase().split('');
+
+  // if (testArr.length === originalArr.length && testArr.every(n => originalArr.includes(n)) ) {
+  //   return true ;
+
+  // }
+  // else {
+  //   return false;
+  // }
+
+  return /test/i.test(original);
+
   
 
-counting([6,5,4,3,3,3,3,2,1]);
+}
+
+console.log(anagram("ound", "round"));
+
+
+
+
+
 
 
 
