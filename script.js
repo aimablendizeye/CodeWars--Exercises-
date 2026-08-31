@@ -2727,3 +2727,38 @@ function twoLargest (arr) {
 }
 
 console.log(twoLargest([24,78,34,21,89,65]));
+
+
+
+// Q 95 
+
+// You need to swap the head and the tail of the specified array:
+
+// the head (the first half) of array moves to the end, the tail (the second half) moves to the start.
+// The middle element, if it exists, stays in the same position.
+
+// Return a new array. Do not modify the input.
+
+// For example:
+
+// [ 1, 2, 3, 4, 5 ]   =>  [ 4, 5, 3, 1, 2 ]
+//  \----/   \----/         
+//   head     tail 
+
+function headAndTail (arr){
+  let part = arr.length/2;
+  let middle = arr.at(part);
+  let half1 = arr.slice(0,part);
+  let half2;
+
+  if (arr.length %2 ==0) {
+     half2 = arr.slice(part);
+      return [...half2,...half1]
+  }
+  else {
+    half2 = arr.slice(part+1);
+     return [...half2,middle,...half1]
+    
+  }
+}
+console.log(headAndTail([1,3,4,5]));
