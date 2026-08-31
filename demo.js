@@ -1775,24 +1775,25 @@
 
 
 
-function removing (arr) {
 
-  let  newArr =arr.filter(n => n !== Number(n));
 
-  let allUpper =  newArr.join('').toUpperCase();
-  let vowel = ["A","E","O","U","I"];
-  let vow =[]
+// function removing (arr) {
+
+//   let  newArr =arr.filter(n => n !== Number(n));
+
+//   let allUpper =  newArr.join('').toUpperCase();
+//   let vowel = ["A","E","O","U","I"];
+//   let vow =[]
   
 
- if (vowel.some(n => allUpper.includes(n))){
+//  if (vowel.some(n => allUpper.includes(n))){
 
- }
+//  }
+// }
 
- 
- 
-}
+// console.log(removing([1,"a","B",5,3,"c"]));
 
-console.log(removing([1,"a","B",5,3,"c"]));
+
 
 
 

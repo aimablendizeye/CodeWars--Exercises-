@@ -2704,3 +2704,26 @@ function isAnagram(test, original) {
 }
 
 
+
+
+// Q 94 
+
+// Rick wants a faster way to get the product of the largest pair in an array. Your task is to create a performant solution to find the product of the largest two integers in an array of positive numbers.
+
+// Rick is only interested in solutions that are faster than his, which has a running time of O(n log n).
+
+// [2, 6, 3]                      => 18 = 6 * 3
+// [2, 1, 5, 0, 4, 3]             => 20 = 5 * 4
+// [7, 8, 9]                      => 72 = 8 * 9
+// [33, 231, 454, 11, 9, 99, 57]  => 104874 = 231 * 454
+
+
+function twoLargest (arr) {
+  let max1 = Math.max(...arr)
+  let newArr = arr.filter(n => n !== max1);
+  
+  let max2 = Math.max(...newArr);
+  return max1 * max2;
+}
+
+console.log(twoLargest([24,78,34,21,89,65]));
