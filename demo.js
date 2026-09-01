@@ -1796,6 +1796,22 @@
 
 
 
+// function spreading (arr) {
+  
+//   let str = arr.join();
+
+//   let num = str.replaceAll(".","").trim().split('').map(n => Number(n));
+//     let newArr = [];
+//     for (let i=1; i<=num[0]; i++) {
+//       newArr.push(i);
+//     }
+//     return newArr;
+  
+// }
+// console.log(spreading(["...5"]));
+
+
+
 
 
 

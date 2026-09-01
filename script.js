@@ -2762,3 +2762,32 @@ function headAndTail (arr){
   }
 }
 console.log(headAndTail([1,3,4,5]));
+
+
+
+
+// Q 96
+
+
+// Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+
+// Example
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+// The returned format must be correct in order to complete this challenge.
+
+// Don't forget the space after the closing parentheses!
+
+function createPhone(arr) {
+  let firstPart = arr.length/3
+  let arr1 = arr.slice(0,firstPart)
+  let arr2= arr.slice(firstPart,arr.length-4);
+  let arr3 = arr.slice(arr.length-4);
+  let bracket1 = "("
+  let bracket2 = ")";
+  let hyphene = "-"
+  let empty =" ";
+  
+  return [bracket1,...arr1,bracket2,empty,...arr2,hyphene,...arr3].join('');
+}
+
+console.log(createPhone([1,2,3,4,5,6,7,8,9,0]));
