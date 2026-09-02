@@ -2870,3 +2870,35 @@ function checkValidTrNumber (nums){
    
 }
 console.log(checkValidTrNumber(12762438338));
+
+
+// Q 98 
+
+// You will be given a number and you will need to return it as a string in Expanded Form. For example:
+
+//    12 --> "10 + 2"
+//    45 --> "40 + 5"
+// 70304 --> "70000 + 300 + 4"
+
+
+
+function expandedForm (num) {
+  let arr = num.toString().split('').reverse();
+
+  let newArr = []
+for (let i=0; i<arr.length; i++) {
+  
+  
+  let padding  = arr[i].padEnd(i+1 ,"0");
+  newArr.push(padding);
+
+  }
+  let final = newArr.reverse();
+
+   let string =  final.map(String).filter(n => n!= 0);
+   
+  return string.join(' ').replaceAll(" "," + ");
+  
+}
+
+console.log(expandedForm(420370022)); 
