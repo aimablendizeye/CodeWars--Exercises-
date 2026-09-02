@@ -2805,3 +2805,68 @@ function createPhoneNumber(numbers){
   return format;
 }
 console.log(createPhoneNumber("1234567890"));
+
+// Q 97 
+
+// Every Turkish citizen has an identity number whose validity can be checked by these set of rules:
+
+// It has 11 digits and the first digit can't be zero
+// Take the sum of 1st, 3rd, 5th, 7th and 9th digit and multiply it by 7. Then subtract the sum of 2nd, 4th, 6th and 8th digits from this value. Modulo 10 of the result should be equal to the 10th digit
+// Sum of first ten digits' modulo 10 should be equal to the 11th digit
+// Task
+// Your task is to write a function to check if the given number is a valid Turkish ID number, and return true or false accordingly. Return false for any invalid input too (e.g. strings).
+
+// Example
+// input = 10167994524
+
+// 1 + 1 + 7 + 9 + 5 = 23  // sum of 1st, 3rd, 5th, 7th and 9th digit
+// 23 * 7 = 161            // sum multiplied by 7
+// 0 + 6 + 9 + 4 = 19      // sum of 2nd, 4th, 6th and 8th digits
+// 161 - 19 = 142          // subtracted from the first value
+
+// 142 % 10 = 2            // modulo 10 of the result
+// 10167994524             // should be equal to the 10th digit
+//          ^
+
+// 1 + 0 + 1 + 6 + 7 + 9 + 9 + 4 + 5 + 2 = 44
+//                         // sum of first 10 digits
+// 44 % 10 = 4             // modulo 10 of the result
+// 10167994524             // should be equal to the 11th digit
+//           ^
+
+
+function checkValidTrNumber (nums){
+  if (!Number.isInteger(nums)) return false;
+
+  let arr = nums.toString().split('').map(Number);
+  
+  let arr1 =[];
+  let arr2 =[]
+  for (let i=0; i<arr.length; i++) {
+    if (i %2 === 0) {
+      arr1.push(arr[i]);
+    }
+    else {
+      arr2.push(arr[i]);
+    }
+  }
+
+  let newArr1 = arr1.slice(0,-1);
+  let newArr2 = arr2.slice(0,-1);
+  let sum1 = newArr1.reduce((a,b) => a +b,0)*7 ;
+  let sum2 = newArr2.reduce((a,b) => a +b,0);
+  let sub = sum1 - sum2;
+  let subModulo  = sub % 10;
+  let tenDigit = arr.slice(0,-1);
+  let sumTenDigit = tenDigit.reduce((a,b) => a +b,0);
+  let tenModulo = sumTenDigit % 10;
+
+  if (subModulo === arr[9] && tenModulo === arr[10]) {
+    return true;
+  }
+  else {
+    return false;
+  }
+   
+}
+console.log(checkValidTrNumber(12762438338));

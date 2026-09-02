@@ -1814,6 +1814,30 @@
 
 
 
+// function unSquareDigit (n) {
+//   let arr = n.toString().split('').map(Number);
+
+//   let newarr = [];
+
+//   for (let i=0;  i<arr.length; i++) {
+
+//     let square = Math.sqrt(arr[i]);
+
+//     if (!Number.isInteger(square)) {
+//       let two = `${arr[i]}` 
+     
+//       newarr.push(two);
+      
+//     }
+       
+//   }
+//   return newarr.map(Number);
+// }
+// console.log(unSquareDigit(81181));
+
+
+
+
 
 
 
