@@ -2929,3 +2929,59 @@ function solve (s,g) {
   return arr;
 }
 console.log(solve(12,5));
+
+
+// Q 100 
+
+//  L     1.....5 | 6.....0     R
+//  E     Q.....T | Y.....P     I
+//  F     A.....G | H.....'     G
+//  T     Z.....B | N...../     H
+//           SPACEBAR           T
+// Note: the SpaceBar is an exception, because both hands can be used to hit it.
+
+// Complete the function that accepts a string.
+
+// if the string can be typed by the left hand only, return "Left"
+// if the string can be typed by the right hand only, return "Right"
+// if both hands are needed to type the string, return "Both"
+// if the string is empty or contains only spaces, return an empty string ""
+// Please remember that we are discussing the keyboard above and not any other one. The reason is that we need a standard. And we will not test characters that are outside the control of both hands (please see the boundary).
+
+// Examples
+// "qwert"    -->  "Left"
+// "yuiop"    -->  "Right"
+// "abc"      -->  "Left"
+
+
+function leftRightOrBoth(str){
+  
+let left = `12345!@#$%qwertasdfgzxcvb`;
+let right =`67890^&*()yuiophjkl;'":nm,<.>/?`;
+let leftArr = left.split('');
+let rightArr = right.split('');
+let strArr = str.toLowerCase().split('');
+
+  const chars = strArr.filter(char => char !== " ")
+  
+  if (chars.length === 0) {
+    return "";
+  }
+let leftBool = strArr.some(n => leftArr.includes(n));
+let rightBool = strArr.some(n => rightArr.includes(n));
+
+
+if(leftBool && rightBool) {
+  return `Both`;
+}
+
+if(leftBool) {
+  return `Left`;
+}
+ if(rightBool ) {
+  return `Right`;
+}
+else {
+  return ""
+}
+}
