@@ -1,4 +1,4 @@
-function anagram (test, original) {
+
 //   let testArr = test.split('').toLowerCase();
 //   let originalArr = original.split('').toLowerCase();
 
