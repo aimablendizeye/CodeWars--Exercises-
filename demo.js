@@ -1845,6 +1845,35 @@
 
 
 
+function letfRightBoth (str) {
+let left = `12345!@#$%qwertasdfgzxcvb`;
+let right =`67890^&*()yuiophjkl;:'nm,<.>/?`;
+let leftArr = left.split('');
+let rightArr = right.split('');
+let strArr = str.split('');
+
+let leftBool = strArr.some(n => leftArr.includes(n));
+let rightBool = strArr.some(n => rightArr.includes(n));
+
+if (str == null) return "";
+
+if(leftBool && rightBool) {
+  return "Both";
+}
+
+if(leftBool) {
+  return "Left";
+}
+ if(rightBool ) {
+  return "Right";
+}
+else {
+  return ""
+}
+
+}
+
+console.log(letfRightBoth("g"));
 
 
 

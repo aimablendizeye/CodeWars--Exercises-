@@ -1,13 +1,3 @@
-
-//   let testArr = test.split('').toLowerCase();
-//   let originalArr = original.split('').toLowerCase();
-
-  
-
-//   return testArr.every(n => originalArr.includes(n))
-
-  
-
+ if (!rightBool && !leftBool) {
+//   return ""
 // }
-
-// console.log(anagram("Buckethead", "DeathCubeK"));
