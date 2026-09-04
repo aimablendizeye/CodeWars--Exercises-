@@ -1839,6 +1839,18 @@
 // idea of doing reverse 
 
 
+function square (n,m) {
+  let arr = [];
+  let result = ""
+
+  // length of the second number 
+  for (let i=n; i<m; i++) {
+
+    
+      
+  }
+}
+
 
 
 
