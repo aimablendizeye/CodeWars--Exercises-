@@ -1836,11 +1836,9 @@
 // console.log(unSquareDigit(81181));
 
 
-
-
-
-
 // idea of doing reverse 
+
+
 
 
 
