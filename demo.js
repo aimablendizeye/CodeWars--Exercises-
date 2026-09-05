@@ -1839,20 +1839,36 @@
 // idea of doing reverse 
 
 
-function square (n,m) {
-  let arr = [];
-  let result = ""
+// function square (n,m) {
+//   let arr = [];
+//   let result = ""
 
-  // length of the second number 
-  for (let i=n; i<m; i++) {
+//   // length of the second number 
+//   for (let i=n; i<m; i++) {
 
     
       
-  }
+//   }
+// }
+
+
+function negativeValue (string , value) {
+     if (string.length %2 ===0 && value === false) {
+      return false;
+     }
+     if (string.length %2 !==0 && value === true) {
+      return false;
+     }
+     if (string.length %2 !==0 && typeof value !== "boolean") {
+      return false;
+     }
+    else {
+      return true;
+    }
+
 }
 
-
-
+console.log(negativeValue("!!!", []));
 
 
 
