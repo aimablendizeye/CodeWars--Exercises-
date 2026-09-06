@@ -1852,23 +1852,39 @@
 // }
 
 
-function negativeValue (string , value) {
-     if (string.length %2 ===0 && value === false) {
-      return false;
-     }
-     if (string.length %2 !==0 && value === true) {
-      return false;
-     }
-     if (string.length %2 !==0 && typeof value !== "boolean") {
-      return false;
-     }
-    else {
-      return true;
-    }
+// function negativeValue (string , value) {
+//      if (string.length %2 ===0 && value === false) {
+//       return false;
+//      }
+//      if (string.length %2 !==0 && value === true) {
+//       return false;
+//      }
+//      if (string.length %2 !==0 && typeof value !== "boolean") {
+//       return false;
+//      }
+//     else {
+//       return true;
+//     }
 
+// }
+
+// console.log(negativeValue("!!!", []));
+
+
+
+function subArrays (arr, k) {
+ // let newArr = [];
+
+ let sum = 0;
+
+  for (let i=0; i<k; i++) {
+    sum = sum + arr[i];
+
+  } 
+  return sum;
 }
 
-console.log(negativeValue("!!!", []));
+console.log(subArrays([1,2,3,4,5,6,7],3));
 
 
 
