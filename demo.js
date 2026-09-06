@@ -1872,19 +1872,48 @@
 
 
 
-function subArrays (arr, k) {
- // let newArr = [];
+// function subArrays (arr, k) {
+//  // let newArr = [];
 
- let sum = 0;
+//  let sum = 0;
 
-  for (let i=0; i<k; i++) {
-    sum = sum + arr[i];
+//   for (let i=0; i<k; i++) {
+//     sum = sum + arr[i];
 
-  } 
-  return sum;
+//   } 
+//   return sum;
+// }
+
+// console.log(subArrays([1,2,3,4,5,6,7],3));
+
+
+function sortingObject (char, arr) {
+
+  if (char === "a") {
+        return arr.sort ((a,b) => b.a - a.a)
+  }
+
+  if (char === "b"){
+        return arr.sort ((a,b) => b. b- a.b)
+  }
+
+  else {
+    return [];
+  }
+
+ 
 }
 
-console.log(subArrays([1,2,3,4,5,6,7],3));
+let arr = [
+  {"a": 1, "b": 3},
+  {"a": 3, "b": 2},
+  {"a": 2, "b": 40},
+  {"a": 4, "b": 12}
+]
+
+console.log(sortingObject("b",arr));
+ 
+
 
 
 
