@@ -97,7 +97,6 @@ function scoring (arr,a,b,c) {
       }
       
     }
-
     let correct = countCorr * a;
     let omitting  = omitted * b;
     let wronging = wrong * c;
