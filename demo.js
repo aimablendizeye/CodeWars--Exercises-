@@ -1887,31 +1887,37 @@
 // console.log(subArrays([1,2,3,4,5,6,7],3));
 
 
-function sortingObject (char, arr) {
+// function sortingObject (char, arr) {
 
-  if (char === "a") {
-        return arr.sort ((a,b) => b.a - a.a)
-  }
+//   if (char === "a") {
+//         return arr.sort ((a,b) => b.a - a.a)
+//   }
 
-  if (char === "b"){
-        return arr.sort ((a,b) => b. b- a.b)
-  }
+//   if (char === "b"){
+//         return arr.sort ((a,b) => b. b- a.b)
+//   }
 
-  else {
-    return [];
-  }
+//   else {
+//     return [];
+//   }
 
- 
-}
+// }
 
-let arr = [
-  {"a": 1, "b": 3},
-  {"a": 3, "b": 2},
-  {"a": 2, "b": 40},
-  {"a": 4, "b": 12}
-]
+// let arr = [
+//   {"a": 1, "b": 3},
+//   {"a": 3, "b": 2},
+//   {"a": 2, "b": 40},
+//   {"a": 4, "b": 12}
+// ]
 
-console.log(sortingObject("b",arr));
+// console.log(sortingObject("b",arr));
+
+
+
+
+
+
+
  
 
 
