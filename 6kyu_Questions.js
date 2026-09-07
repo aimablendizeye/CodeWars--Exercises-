@@ -27,3 +27,30 @@ function spinWords (string) {
 }
 
 console.log(spinWords("This is another test"))
+
+
+// Q2 
+
+// Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case). The next words should be always capitalized.
+
+// Examples
+// "the-stealth-warrior" gets converted to "theStealthWarrior"
+
+// "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
+
+// "The_Stealth-Warrior" gets converted to "TheStealthWarrior"
+
+
+
+function tocameCase (string) {
+     let words = string.replaceAll("_"," ").replaceAll("-"," ")
+      let word = words.split(' ')
+   
+    let capital =word.filter(n => n !== word[0]).map(n => n.charAt(0).toUpperCase() + n.slice(1))
+
+    return [word[0],...capital].join('');
+}
+
+console.log(tocameCase("the-stealth-warrior"));
+
+
