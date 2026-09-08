@@ -1,3 +1,3 @@
- if (!rightBool && !leftBool) {
-//   return ""
-// }
+else {
+    return undefined;
+  }

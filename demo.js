@@ -1918,23 +1918,6 @@
 
 
 
-function checkingRepeat (string) {
-       let arr = string.toLowerCase().split('');
-
-       let repeated = arr.filter((val, index) => {
-        if (arr.indexOf(val) !== index) {
-         return val;
-        }
-         else {
-             return undefined;
-       }
-        ;
-       }) 
-  
-        
-}
-
-console.log(checkingRepeat("122444456"));
    
 
 

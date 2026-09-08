@@ -54,3 +54,39 @@ function tocameCase (string) {
 console.log(tocameCase("the-stealth-warrior"));
 
 
+// Q 3
+
+// Find the first character that repeats in a string and return that character. If there is no such character, return undefined/null/None/Nothing, etc. (depending on your language). Your function should be case-sensitive (a is not equivalent to A).
+
+// firstDup('tweet') => 't'
+// firstDup('like') => undefined
+// This is not the same as finding the character that repeats first. In that case, an input of 'tweet' would yield 'e'.
+// Another example:
+
+// In 'translator' you should return 't', not 'a'.
+// v      v  
+// translator
+//   ^   ^
+// While second 'a' appears before second 't', the first 't' is before the first 'a'.
+
+
+
+function checkingRepeat (input) {
+      
+ let count ={};
+       
+ for (let char of input) {
+  count[char] = (count[char] || 0)+1
+ }
+
+ for (let char of input)  {
+  if (count[char] > 1) {
+    return char;
+  }
+  
+ }
+ return undefined;
+    
+}
+
+console.log(checkingRepeat("tweet"));
