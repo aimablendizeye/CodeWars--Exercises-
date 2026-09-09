@@ -107,3 +107,20 @@ function scoring (arr,a,b,c) {
 }
 
 console.log(scoring([0, 1, 0, 0, 2, 1, 0, 2, 2, 1], 3, -1, 2));
+
+
+// Q 4
+
+// Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+// Examples:
+// Input: 42145 Output: 54421
+
+// Input: 145263 Output: 654321
+
+// Input: 123456789 Output: 987654321
+
+function descendingOrder(n){
+  let str = n.toString().split("").sort((a,b) =>b-a).join("");
+  return Number(str)
+}
