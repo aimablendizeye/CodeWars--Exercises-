@@ -1916,7 +1916,21 @@
 
 
 
+  function groupingThree (arr){
+    let newArr = []
+    
+    for (let i=0; i<arr.length; i+=3) {
+    
+      nums = arr.slice(i,i + 3);
+      newArr.push (nums)
+      
+    }
+    return  newArr;
 
+   
+  }
+
+ console.log(groupingThree([1,2,3,4,4,5,6,7,8,6])) ;
 
    
 
