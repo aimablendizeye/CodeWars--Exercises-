@@ -90,3 +90,24 @@ function checkingRepeat (input) {
 }
 
 console.log(checkingRepeat("tweet"));
+
+
+// Q 4 
+
+// So now your task is to write the function antiOptimizeAsync, which takes a single parameter task (a function), and immediately returns a Promise that only resolves to the return value of task() at least 11 seconds (and at most 12 seconds) after antiOptimizeAsync is called.
+
+// task will always be an arbitrary function that might run for any duration between 0 to 10 seconds.
+
+
+function antiOptimice (task){
+return new Promise (resolve => {
+    let result = task()
+
+    setTimeout (() => {
+      
+      resolve(result)
+    },11000)
+  })
+}
+
+antiOptimice(task);
