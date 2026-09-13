@@ -1916,24 +1916,93 @@
 
 
 
-  function groupingThree (arr){
-    let newArr = []
+//   function groupingThree (arr){
+//     let newArr = []
      
+//     for (let i=0; i<arr.length; i+=3) {
     
-    for (let i=0; i<arr.length; i+=3) {
-    
-      let  nums = arr.slice(i,i + 3);
-       newArr.push(nums);
+//       let  nums = arr.slice(i,i + 3);
+//        newArr.push(nums);
       
-    }
-    return  newArr;
+//     }
+//     return  newArr;
+ 
+//   }
+
+//  console.log(groupingThree([1,2,3,4,4,5,6,7,8,6,10])) ;
 
    
+function counting (x,y) {
+
+  let positiveX =Math.abs(x)
+  let positiveY =Math.abs(y)
+  let arr = [positiveX ,positiveY ]
+  let max = Math.max(...arr)
+  let min = Math.min(...arr)
+
+  let arrMax =[]
+
+  if (x < 0 && positiveX < positiveY) {
+    for (let i=0; i<max; i++) {
+      arrMax.push(i)
+    }
+
+    return arrMax.filter(n => n>=positiveX).length;
   }
 
- console.log(groupingThree([1,2,3,4,4,5,6,7,8,6,10])) ;
 
-   
+
+   if (x < 0 && positiveX > positiveY) {
+    for (let i=0; i<max; i++) {
+      arrMax.push(i)
+    }
+
+    return arrMax.filter(n => n>=positiveY).length * -1;
+  }
+
+   if (y < 0 && positiveX > positiveY) {
+    for (let i=0; i<max; i++) {
+      arrMax.push(i)
+    }
+
+    return arrMax.filter(n => n>=positiveY).length ;
+  }
+
+
+   if (y < 0 && positiveX < positiveY) {
+    for (let i=0; i<max; i++) {
+      arrMax.push(i)
+    }
+
+    return arrMax.filter(n => n>=positiveX).length *-1;
+  }
+
+else {
+
+    let arr1 = []
+  let arr2 =[]
+  
+  for (let i=0; i<positiveX; i++){
+    arr1.push(i);
+  }
+   for (let i=0; i<positiveY; i++){
+    arr2.push(i);
+  }
+
+  let allArr = [...arr1,...arr2]
+
+  return allArr.length
+
+}
+}
+
+console.log(counting(-16,-10));
+
+
+
+
+
+
 
 
 

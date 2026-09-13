@@ -99,6 +99,11 @@ console.log(checkingRepeat("tweet"));
 // task will always be an arbitrary function that might run for any duration between 0 to 10 seconds.
 
 
+function task () {
+  return "Task completed";
+}
+
+
 function antiOptimice (task){
 return new Promise (resolve => {
     let result = task()
