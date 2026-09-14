@@ -116,3 +116,91 @@ return new Promise (resolve => {
 }
 
 antiOptimice(task);
+
+
+// Q 5 
+
+// Given Two integers a , b , find The sum of them , BUT You are not allowed to use the operators + and -
+
+// Notes
+// The numbers (a,b) may be positive , negative values or zeros .
+
+// Returning value will be an integer .
+
+// Javascript: the Array reduce methods are disabled, along with eval, require, and module .
+// Input >> Output Examples
+// 1- Add (5,19) ==> return (24) 
+
+// 2- Add (-27,18) ==> return (-9)
+
+// 3- Add (-14,-16) ==> return (-30)
+
+function counting (x,y) {
+
+  let positiveX =Math.abs(x)
+  let positiveY =Math.abs(y)
+  let arr = [positiveX ,positiveY ]
+  let max = Math.max(...arr)
+  let min = Math.min(...arr)
+
+  let arrMax =[]
+
+
+  // 1
+
+  if (x < 0 && y > 0) {
+    for (let i=0; i<max; i++) {
+      arrMax.push(i)
+    }
+
+    return arrMax.filter(n => n>=positiveY).length * -1;
+  }
+// 2
+
+   if (x > 0 && y < 0) {
+    for (let i=0; i<max; i++) {
+      arrMax.push(i)
+    }
+
+    return arrMax 
+    .filter(n => n>=positiveY).length ;
+  }
+
+  // 3
+
+   let arr1 = []
+  let arr2 =[]
+
+   if (x < 0 && y < 0) {
+     for (let i=0; i<positiveX; i++){
+    arr1.push(i);
+  }
+
+   for (let i=0; i<positiveY; i++){
+    arr2.push(i);
+  }
+
+    let allArr = [...arr1,...arr2]
+
+   return allArr.length * -1;
+
+  }
+  // 4 
+
+    if (x >= 0 && y >= 0) {
+     for (let i=0; i<positiveX; i++){
+    arr1.push(i);
+  }
+
+   for (let i=0; i<positiveY; i++){
+    arr2.push(i);
+  }
+
+    let allArr = [...arr1,...arr2]
+
+   return allArr.length ;
+
+  }
+}
+
+console.log(counting(1000,1000));
