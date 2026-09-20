@@ -2,7 +2,21 @@
 
 
 
+function divisibleCount(x, y, k) {
+    
+  
+    let arr = [];
+    for (let i=x; i<=y; i++){
+        if (i % k === 0) {
+          arr.push(i);
+        }
+    
+    }
+    return arr.length;
+   
+}
 
+console.log(divisibleCount(4,9,2))
    
 
 
