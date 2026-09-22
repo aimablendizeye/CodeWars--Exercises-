@@ -204,3 +204,23 @@ function counting (x,y) {
 }
 
 console.log(counting(1000,1000));
+
+
+// 6
+
+
+
+function increment(str) {
+  let arr = str.split('')
+  let string = str.match(/[A-Za-z]/g)
+  let numbers = str.match(/\d+/g).join("")
+  let digits = Number(numbers)
+   
+  let incr = digits + 1
+
+ return [...string,incr].join('');
+  //return incr
+
+}
+
+console.log(increment("foo0999"))
