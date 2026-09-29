@@ -177,4 +177,4 @@ function occurence (arr,target) {
   return arr.filter (num => num === target).length
 }
 
-console.log(occurence([2,3,4,5,3,3,4],9))
+console.log(occurence([2,3,4,5,3,3,4],3))
