@@ -167,3 +167,14 @@ function highLow (numbers) {
 }
 
 console.log(highLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
+
+
+// Q 6 
+
+//Write a function that returns the number of occurrences of an element in an array.
+
+function occurence (arr,target) {
+  return arr.filter (num => num === target).length
+}
+
+console.log(occurence([2,3,4,5,3,3,4],9))
