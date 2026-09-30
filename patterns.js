@@ -10,3 +10,13 @@ function repeat (arr,limit) {
 }
 
 console.log(repeat([2,3,4,5,6,7,8],2));
+
+
+// regex Expression in JS 
+
+function convertScore(str) {
+   let nums = str.replace(/[^0-9]+/g," ").split(" ")
+   return nums.filter (n => n !=="").map(Number)
+}
+
+console.log(convertScore("24-79(72)  105(53,52)"))
