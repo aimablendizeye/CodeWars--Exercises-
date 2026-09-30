@@ -222,19 +222,21 @@ console.log(counting(1000,1000));
 
 
 function replacing (string, letter) {
+  
   let lower = string.toLowerCase().replaceAll(" ","").split('');
- let countArr = []
   let obj = lower.reduce((count, letter) => {
     count[letter] = (count[letter] || 0) + 1
     return count;
   }, {})
      ;
-  return obj;
-  
+const sorted = Object.entries(obj).sort((a,b) => b[1] - a[1])
+const lett =  sorted[0][0]
+const result = string.replaceAll(lett,letter);
+  return result
   
 }
 
-console.log(replacing("my mom loves me as never did"))
+console.log(replacing('great job go ahead', 'k'))
 
 
 // Q 7 
@@ -253,11 +255,7 @@ console.log(replacing("my mom loves me as never did"))
 // Example Output 1
 // 4
 
-// Example Input 2
-//   I'd been using my sphere as a stool. I traced counterclockwise circles on it with my fingertips and it shrank until I could palm it. My bolt had shifted while I'd been sitting. I pulled it up and yanked the pleats straight as I careered around tables, chairs, globes, and slow-moving fraas. I passed under a stone arch into the Scriptorium. The place smelled richly of ink. Maybe it was because an ancient fraa and his two fids were copying out books there. But I wondered how long it would take to stop smelling that way if no one ever used it at all; a lot of ink had been spent there, and the wet smell of it must be deep into everything.
 
-// Example Output 2
-// 112
 
 
 function wordCount(str) {
