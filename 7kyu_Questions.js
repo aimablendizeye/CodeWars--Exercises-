@@ -178,3 +178,31 @@ function occurence (arr,target) {
 }
 
 console.log(occurence([2,3,4,5,3,3,4],3))
+
+
+
+// Q 7 
+// You are going to be given a non-empty string. Your job is to return the middle character(s) of the string.
+
+// If the string's length is odd, return the middle character.
+// If the string's length is even, return the middle 2 characters.
+// Examples:
+// "test" --> "es"
+// "testing" --> "t"
+// "middle" --> "dd"
+// "A" --> "A"
+
+function getMiddle(s) {
+  if (s.length%2==0) {
+   let  str = s.at(s.length/2 -1) + 
+       s.at(s.length/2)
+    return `${str}`
+  }
+  else if(s.length %2 !=0) {
+    return `${s.at(s.length/2)}`
+  }
+  return "";
+    ;
+}
+
+console.log(getMiddle("test"))
