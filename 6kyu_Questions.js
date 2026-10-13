@@ -395,3 +395,53 @@ function persistence (nums) {
     return count;
 }
 console.log(persistence(39))
+
+
+// Q 11 
+
+// As the title suggests, this is the hard-core version of another neat kata.
+
+// The task is simple to explain: simply sum all the numbers from the first parameter being the beginning to the second parameter being the upper limit (possibly included), going in steps expressed by the third parameter.
+
+// If the beginning is already equal to the limit, return it, regardless of the step.
+// If it is an impossible sequence (with the beginning being larger than the limit and a positive step or the other way around), return 0.
+// step will never be 0
+// Very large sequences will be tested, so brute-force will not work.
+
+// Examples
+// begin end step      expected
+//   2    2   2   ===>  2  // 2
+//   2    6   2   ===> 12  // 2 + 4 + 6
+//   1    5   1   ===> 15  // 1 + 2 + 3 + 4 + 5
+//   1    5   3   ===>  5  // 1 + 4
+//   1    5  -3   ===>  0  // cannot reach a positive by adding negatives
+//  -1   -5  +1   ===>  0  // cannot reach a negative by adding positives
+//   2    2  -9   ===>  2  // the step is never used
+
+
+function sequenceSum(begin, end, step){
+  let arr =[]
+  
+   if (begin >0 && end >0 && step <0) {
+    return 0;
+  }
+  else if(begin <0 && end <0 && step >0) {
+    return 0;
+  }
+  else if (begin == end) {
+    return begin;
+  }
+  else if (begin < end) {
+    for (let i=begin; i<=end; i+=step) {
+      arr.push(i)
+  } 
+  }
+   else if (begin > end) {
+      for (let i=begin; i>=end; i+=step){
+        arr.push(i)
+      }
+    }
+  return arr.reduce((a,b) => a + b); 
+}
+
+console.log(sequenceSum(-2, 4, 658))
