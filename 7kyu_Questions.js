@@ -209,6 +209,8 @@ console.log(getMiddle("test"))
 
 
 // Q 8 
+
+
 // Given a number >= 0, return all the possible sums of two digits of it.
 
 // In the output, the pairs of digits should be ordered first left-to-right for the first digit, then left-to-right for subsequent digits.
