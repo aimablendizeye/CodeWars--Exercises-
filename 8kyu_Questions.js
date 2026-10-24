@@ -54,3 +54,20 @@ function repeat (n,s) {
 }
 
 console.log(repeat(4,"a"))
+
+
+// Q3 
+
+// Calculate the average of an array 
+
+function findAverage(array) {
+  
+  if (array.length == 0) return 0;
+  
+  let sum = 0;
+  for (let i =0; i <array.length; i++) {
+    sum +=  array[i];
+  }
+  return Math.ceil(sum / array.length);
+}
+console.log(findAverage([3,4,6,7,8,9]))
