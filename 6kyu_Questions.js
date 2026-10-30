@@ -567,3 +567,35 @@ function comp(array1, array2){
 }
 
 console.log(comp([2,2,3],[4,9,9]))
+
+
+
+
+// Q 16
+
+// Create a function that receives a string consists of only digit characters ('0' to '9'), and returns the lowest product of 4 consecutive digits within that string.
+
+// This should only work if the number has 4 digits or more. If not, return "Number is too small" instead.
+
+// Example
+// "123456789" --> 24    // 1*2*3*4
+// "35" --> "Number is too small"
+
+
+function lowestProduct(input) { 
+  if (input.length <4)return "Number is too small";
+  let arr = input.split('').map(Number);
+  let newArr = []
+ 
+  for (let i=0; i<arr.length; i+=1){
+    let batch = arr.slice(i, i+4);
+    newArr.push(batch);
+  }
+  let multArr = newArr.filter(elem => elem.length === 4);
+  
+   
+  let productArr = multArr.map(array => array.reduce((a,b) => a * b))
+  return Math.min(...productArr);
+    
+}
+console.log(lowestProduct("2345611117899")); 
